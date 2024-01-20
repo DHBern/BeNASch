@@ -1,5 +1,5 @@
 ---
-title: Werte
+title: 3. Werte
 layout: default
 nav_order: 4
 ---

@@ -1,5 +1,5 @@
 ---
-title: Ereignisse
+title: 5. Ereignisse
 layout: default
 nav_order: 5
 ---
