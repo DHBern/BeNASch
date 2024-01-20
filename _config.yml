@@ -4,3 +4,10 @@ theme: just-the-docs
 
 url: https://dhbern.github.io/benasch
 
+# Aux links for the upper right navigation
+aux_links:
+  "Trage zum Projekt bei auf GitHub!":
+    - "https://github.com/DHBern/BeNASch"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
