@@ -1,6 +1,7 @@
 ---
 title: Entitäten
 layout: default
+nav_order: 3
 ---
 
 # 2. Entitäten
