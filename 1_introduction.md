@@ -27,24 +27,46 @@ maschinelle Training für die folgenden Informationsextraktions-Aufgaben
 ermöglichen:
 
 -   Entity Detection
-
 -   Named Entity Recognition
-
 -   Relation Extraction
-
 -   Coreference Resolution
-
 -   Event Extraction
 
 Das Ziel ist hierbei sowohl Konsistenz, wie auch Vollständigkeit.
 Konsistenz stellt unter anderem sicher, dass Annotator:innen keine
 Schwierigkeiten haben, sich für die richtige Annotation zu entscheiden,
 dies verschnellert auch den Annotationsprozess. Auch maschinengestütztes
-Lernen profitiert von konsistenten Trainingsmaterial. Das Ziel von
+Lernen profitiert von konsistentem Trainingsmaterial. Das Ziel von
 BeNASch ist daher auch, Kompatibilität für computerlinguistische
 Analysen zwischen verschiedenen Editionen herzustellen.
 
 ## 1.3. Eckpunkte
+
+### 1.3.1. Textnahe Annotation
+
+Eine Faustregel für die Annotation in allen folgenden Kapiteln ist, dass
+wir möglichst textnah annotieren. Am leichtesten lässt sich diese Regel
+im Falle von Beziehungen demonstrieren. Haben wir einen Satz wie 
+"Hans ist der Bruder von Maries Ehemann." dann finden wir darin die Beziehung
+"Bruder" zwischen "Hans" und "Maries Ehemann", und eine "Ehe"-Beziehung
+zwischen "Marie" und "Ehemann", aber keine Beziehung "Schwager" zwischen "Hans"
+und "Marie". 
+
+### 1.3.2. Hierarchische Typologien
+
+Das Schema ist auf eine Weise geschrieben, die es ermöglichen sollte, unendliche
+Unterkategorien für jede Kategorie, z.B. zur Entitätenklassifikation, zu schreiben.
+Wir zielen in diesem Dokument darauf ab, eine solche Typologie vorzulegen, 
+und weitere Unterklassen, welche Projekte verwenden, dieser hinzuzufügen um
+möglichst grosse Kompatibilität mit späteren Projekten zu gewährleisten.
+
+Als Beispiel sei zum Beispiel genannt, dass unsere Beziehungstypologie im Moment
+alle Familienbeziehungen unter "fam" (family) versteht. Ein Projekt, für welches
+diese Beziehungen aber in grösserem Detail festgehalten werden müssen, würde
+eventuell feinere Kategorien wie "Ehe", "Geschwister", "Kinder", etc. festlegen.
+Diese würden dann alle "fam" untergeordnet und dies im Schema, oder zumindest
+in der Projektspezifischen Dokumentation (siehe 1.7.) festzuhalten, würde Kompatibilität
+mit Projekten sicherstellen, welche die detaillierteren Unterscheidungen nicht verwenden.
 
 ## 1.4. Komplexität
 
