@@ -18,9 +18,8 @@ und der eine weitgehende Kompatibilität zwischen den Projekten gewährleistet.
 Das Schema wurde auch im Hinblick auf den grossen Nutzen, den Maschinelles Lernen bei
 der automatischen Annotation von textuellen Daten bringen kann, entwickelt.
 
-Die Entwicklung von BeNASch ist ein Projekt von Mitgliedern der Digital Humanities der Universität Bern,
+Die Entwicklung von BeNASch ist ein Projekt von Mitgliedern der [Digital Humanities der Universität Bern](https://www.dh.unibe.ch/),
 die Mitsprache und Perspektiven von ausserhalb dieses Kreises sind aber äusserst erwünscht.
-Oben rechts findet sich ein Link zum Github-Repository des Projekts, darin können über das "Issues"
-oder das "Discussions"-Tab Änderungsvorschläge vorgebracht oder Diskussionen angestossen werden.
+Oben rechts findet sich ein Link zum [Github-Repository des Projekts](https://github.com/DHBern/BeNASch/), darin können über das [Issues](https://github.com/DHBern/BeNASch/issues/) oder das [Discussions](https://github.com/DHBern/BeNASch/discussions/)-Tab Änderungsvorschläge vorgebracht oder Diskussionen angestossen werden.
 Wer sich mit Git auskennt, darf z.B. Tippfehler, Umformulierungen oder Ergänzungen an Beispielen
 auch gerne per Pull-Request einreichen.
