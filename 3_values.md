@@ -59,42 +59,4 @@ Martins Tag\]
 
 ## 3.2. Optionale Werte
 
-### 3.2.1 Zinsen, regelmässige Abgaben (TAX)
-
-Dieses System haben wir insbesondere für Grundbuchquellen entworfen, um
-die Zinsverhältnisse festzuhalten. Erstens sei erwähnt, dass
-Zinsverhältnisse als Teil der Beschreibung einer FAC-Entität (oder LOC,
-falls FAC nicht benutzt wird) gelten.
-
-Beispiel: "Eine Behausung an der Gerbergass, \[ gibt jährl. von
-Eigenschaft wegen dem Spital 5ß TAX\]."
-
-Informationen, die wir hier annotieren sind die Frequenz der Abgabe
-("jährlich",FREQUENCY), die Begründung der Abgabe ("von Eigenschaft
-wegen", CAUSE), die begünstigte Partei ("dem <u>Spital</u>",
-BENEFICIARY) und die Menge der Abgabe ("5ß", AMOUNT). Zudem könnte hier
-auch noch das Datum der Abgabe verzeichnet sein, z.B. als "zu
-Pfingsten", was dann mit DATE annotiert würde. Bei den oben erwähnten
-Werten wie "CAUSE" handelt es sich um Werte, die TAX genauer
-beschreiben, und nicht unabhängig von TAX verwendet werden können.
-
-Eine TAX-Annotation stellt üblicherweise sowohl eine Beschreibung der
-betroffenen Entität wie auch eine Beziehung zur anderen Partei dar.
-Werden Abgaben an mehrere Entitäten geliefert, sind mehrere
-TAX-Annotationen zu tätigen. Aus diesem Grund ist es auch möglich
-mehrere Werte demselben Wert, z.B. mehrere CAUSE, demselben TAX-Wert
-zuzuweisen, aber nie mehrere BENEFICIARY. In der Annotationsanleitung
-geben wir Tipps, wie dies relativ einfach zu bewerkstelligen ist
-innerhalb des Annotationsprogramm und die geteilten Informationen nicht
-mehrfach annotiert werden müssen.
-
-Beispiel: "\...gibt jährl. von der Eigenschaft wegen dem Spital 5ß, dem
-Gottshaus St. Leonhard 2ß 6ȡ und der Carthaus 5ß Bodenzins"
-
-Dieses Beispiel sollte in insgesamt drei TAX-Werten resultieren:
-
-| FREQUENCY | CAUSE | BENEFICIARY | AMOUNT | DATE |
-|---|---|---|---|---|
-| jährl. | von der Eigenschaft wegen | dem Spital | 5ß | N/A |
-| jährl. | von der Eigenschaft wegen | Gottshaus S. Leonhard | 2ß 6ȡ | N/A |
-| jährl. | von der Eigenschaft wegen | der Carthaus | 5ß | N/A |
+<Platzhalter>
