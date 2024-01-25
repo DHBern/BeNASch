@@ -18,9 +18,7 @@ beschrieben.
 Eine Beziehung besteht aus drei Elementen:
 
 -   Erwähnung A
-
 -   Erwähnung B
-
 -   Klassifizierung
 
 Bemerke, dass Beziehungen im Schema Erwähnungen, nicht Entitäten,
@@ -33,8 +31,6 @@ Eheleute-Beziehung. Bei gerichteten Beziehungen ist die Erwähnung A die
 sogenannte *from*-Partei und die Erwähnung B die *to*-Partei. Die
 Beziehung sollte so gelesen werden können "\<from\> is
 \<Beziehungs-Klasse\> by/to/of \<to\>".
-
-TODO
 
 ## 4.1. Koreferenzen
 
@@ -83,3 +79,4 @@ Als Erwähnung B kann LOC auch noch in folgenden Beziehungen auftreten:
 ## 4.3. Optionale Beziehungen
 
 ## 4.4. Nicht-Explizite Beziehungen
+TODO
