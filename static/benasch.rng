@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="XML">
+      <element name="Body">
+        <oneOrMore>
+          <choice>
+            <ref name="List"/>
+            <ref name="Reference"/>
+            <ref name="T"/>
+            <ref name="Value"/>
+          </choice>
+        </oneOrMore>
+      </element>
+    </element>
+  </start>
+  <define name="List">
+    <element name="List">
+      <attribute name="entity_types"/>
+      <attribute name="mention_id">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="subtype"/>
+      <oneOrMore>
+        <choice>
+          <ref name="Attribute"/>
+          <ref name="Descriptor"/>
+          <ref name="List"/>
+          <ref name="Reference"/>
+          <ref name="T"/>
+          <ref name="Value"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="T">
+    <element name="T">
+      <attribute name="token_id">
+        <data type="integer"/>
+      </attribute>
+      <text/>
+    </element>
+  </define>
+  <define name="Value">
+    <element name="Value">
+      <attribute name="value_id">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="value_type">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <ref name="T"/>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="Reference">
+    <element name="Reference">
+      <attribute name="entity_type"/>
+      <attribute name="mention_id">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="mention_subtype"/>
+      <attribute name="mention_type">
+        <data type="NCName"/>
+      </attribute>
+      <attribute name="numerus">
+        <data type="NCName"/>
+      </attribute>
+      <attribute name="specificity">
+        <data type="NCName"/>
+      </attribute>
+      <interleave>
+        <ref name="Head"/>
+        <zeroOrMore>
+          <choice>
+            <ref name="Attribute"/>
+            <ref name="Descriptor"/>
+            <ref name="List"/>
+            <ref name="Reference"/>
+            <ref name="T"/>
+            <ref name="Value"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="Descriptor">
+    <element name="Descriptor">
+      <attribute name="desc_type">
+        <data type="NCName"/>
+      </attribute>
+      <oneOrMore>
+        <choice>
+          <ref name="List"/>
+          <ref name="Reference"/>
+          <ref name="T"/>
+          <ref name="Value"/>
+        </choice>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="Attribute">
+    <element name="Attribute">
+      <attribute name="entity_type">
+        <data type="NCName"/>
+      </attribute>
+      <attribute name="mention_id">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="mention_subtype"/>
+      <attribute name="mention_type">
+        <data type="NCName"/>
+      </attribute>
+      <attribute name="numerus">
+        <data type="NCName"/>
+      </attribute>
+      <attribute name="specificity">
+        <data type="NCName"/>
+      </attribute>
+      <interleave>
+        <ref name="Head"/>
+        <zeroOrMore>
+          <choice>
+            <ref name="Attribute"/>
+            <ref name="Descriptor"/>
+            <ref name="List"/>
+            <ref name="Reference"/>
+            <ref name="T"/>
+            <ref name="Value"/>
+          </choice>
+        </zeroOrMore>
+      </interleave>
+    </element>
+  </define>
+  <define name="Head">
+    <element name="Head">
+      <zeroOrMore>
+        <ref name="T"/>
+      </zeroOrMore>
+    </element>
+  </define>
+</grammar>
