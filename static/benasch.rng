@@ -16,7 +16,8 @@
   </start>
   <define name="List">
     <element name="List">
-      <attribute name="entity_types"/>
+      <attribute name="entity_types">
+      </attribute>
       <attribute name="mention_id">
         <data type="integer"/>
       </attribute>
@@ -56,7 +57,11 @@
   </define>
   <define name="Reference">
     <element name="Reference">
-      <attribute name="entity_type"/>
+      <attribute name="entity_type">
+        <data type="string">
+          <param name="pattern">per.*|org.*|loc.*|gpe.*|unk</param>
+        </data>
+      </attribute>
       <attribute name="mention_id">
         <data type="integer"/>
       </attribute>
@@ -103,7 +108,9 @@
   <define name="Attribute">
     <element name="Attribute">
       <attribute name="entity_type">
-        <data type="NCName"/>
+        <data type="string">
+          <param name="pattern">per.*|org.*|loc.*|gpe.*|unk</param>
+        </data>
       </attribute>
       <attribute name="mention_id">
         <data type="integer"/>
