@@ -525,7 +525,18 @@ Beispiel: "\[<u>Jerg Holzman</u>\], und \[\[<u>seine</u>\]
 
 ## 2.8. Komplizierte Fälle
 
-\<Platzhalter für Beschlüsse, die im Git gefällt werden\>
+### 2.8.1 Mehrere Personen mit nur einem genannten Nachnamen
+
+Beispiel: "Hedwig und Bertschi Eberli"
+
+Werden zwei Personen genannt, aber nur bei einer der Familienname
+beschrieben, folgen wir den Prinzipien der textnahen Annotation.
+
+Beispiel: "\[\[<u>Hedwig</u> /PER] und \[<u>Bertschi Eberli</u> /PER] /LST]"
+
+Für weitere Informationen siehe [Diskussion](https://github.com/raykyn/BeNASch/issues/11)
+
+---
 
 [^1]: In Beispielen zeigen die eckigen Klammern eine Annotation an, eine
     Unterstreichung markiert den *head*. Etwaige weitere Annotationen im
