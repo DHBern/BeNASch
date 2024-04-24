@@ -18,8 +18,8 @@ in verschiedenen Kategorien, beschreiben in den folgenden Kapiteln und die
 Identifikation des *Heads*, indem auch dessen Grenzen im Text festgehalten werden.
 
 ## 2.1. Identifikation von Entitäten
-Eine Entitäten-Erwähnung wird dann annotiert, wenn die Entität unter eine der festgelegten Entitäten-Klassen (Kapitel TODO) fällt. 
-In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich dem Syntax. Artikel und Possessivpronomina sind z.B. explizit Teil der Erwähnung. 
+Eine Entitäten-Erwähnung wird dann annotiert, wenn die Entität unter eine der festgelegten Entitäten-Klassen (Kapitel 2.8.) fällt. 
+In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich der syntaktischen Struktur des Satzes. Artikel und Possessivpronomina sind z.B. explizit Teil der Erwähnung. 
 
 ## 2.2. Identifikation des *Heads*
 Der *Head* markiert das zentrale Element der Erwähnung. Welcher Teil der Erwähnung der *Head* ist,
