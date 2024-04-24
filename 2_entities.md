@@ -271,17 +271,20 @@ ab wann es sich nicht mehr um eine Gruppe von Personen handelt, die
 erwähnt wird, sondern um eine Organisation im Sinne einer ORG. Oft
 kann dies über die Ordinalität unterschieden werden.
 
-Beispiel PER+GRP: "\[Die <u>Schaffner</u> des Spitals\]"
+Beispiel PER+GRP: "\[Die <u>Zimmerleute</u> des Spitals\]"
 
 Beispiel ORG: "\[Die <u>Gesellschaft</u> der Schaffner des
 Spitals\]"
+
+Ein wichtiger Spezialfall ist jedoch zu beachten, wenn eine Personengruppe semantisch für die Organisation selbst steht. Ein häufiger Fall aus dem *Historischen Grundbuch der Stadt Basel* wäre z.B. die Erwähnung von Klöstern (also Organisationen) als "Die <u>Frauen von Klingenthal</u>" oder "den <u>Herren zu St. Peter</u>". Decken sich diese Erwähnungen sinngemäss mit der Erwähnung der Klöster, werden sie als Organisationen, nicht als Personengruppen, erfasst.[^3]
 
 Dazu kommt noch die Unterscheidung von GPE.PER-Erwähnungen, welche dann
 Vorrang haben, wenn Personen als Angehörige einer GPE genannt werden.
 
 Beispiel GPE.PER: "\[Die <u>Berner\]</u> gingen..."
 
-### 2.8.2.1 Erwähnungs-Präzisierungen für Personen
+### 2.8.2.1. Erwähnungs-Präzisierungen für Personen
+Hier folgen die etablierten Präzisierungen für PER-Erwähnungen. Sie sollten verwendet werden, wenn eine Entität als NOM, manchmal auch als PRO, erwähnt wird. Mehr zu Erwähnungs-Präzisierungen in Kapitel 2.3.5.
 
 #### 2.8.2.1.1. func (Funktion)
 
@@ -544,3 +547,5 @@ Für weitere Informationen siehe [Diskussion](https://github.com/raykyn/BeNASch/
     relevant sind.
 
 [^2]: Hinter dem / steht eine allfällige Klassifizierung.
+
+[^3]: [[Diskussion: Personengruppen, die ORGs repräsentieren]](https://github.com/raykyn/BeNASch/issues/2)
