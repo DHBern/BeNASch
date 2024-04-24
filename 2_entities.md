@@ -19,11 +19,24 @@ Identifikation des *Heads*, indem auch dessen Grenzen im Text festgehalten werde
 
 ## 2.1. Identifikation von Entitäten
 Eine Entitäten-Erwähnung wird dann annotiert, wenn die Entität unter eine der festgelegten Entitäten-Klassen (Kapitel 2.8.) fällt. 
-In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich der syntaktischen Struktur des Satzes. Artikel und Possessivpronomina sind z.B. explizit Teil der Erwähnung. 
+In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich der syntaktischen Struktur des Satzes.
+Eine Erwähnung besteht dementsprechend sowohl aus dem Kern (*Head*) sowie die diesen umgebende [[Nominalphrase]](https://de.wikipedia.org/wiki/Nominalphrase). Ein paar Beispiele um zu beschreiben, was Teil der Erwähnung ist:
+
+Beispiel: "\[Der alte <u>Schmied</u>\]"[^1]\
+Beispiel: "\[Die <u>Witwe</u> des Schmied\]"\
+Beispiel: "\[Des Schmieds <u>Witwe</u>\]"\
+Beispiel: "\[Das <u>Haus</u> in der Vorstadt\]"\
+Beispiel: "\[Das <u>Haus</u>, das in der Vorstadt liegt\]"
+
+Diese Erwähnungen können teils grosse Längen annehmen, gewisse Dokumententypen neigen dazu ihre Informationen stark zu verschachteln. Hier ein fiktives Beispiel, das aber z.B. im *Historischen Grundbuch der Stadt Basel* nicht unüblich wäre (die eckigen Klammern markieren die relevante Erwähnung):
+
+"Der Schaffner zu den Barfüssen hat \[Johannes Schmidlin des Gerbers <u>Behausung</u> samt der Schüren, genannt zum Roten Stern, gelegen in der Steinenvorstadt zwischen der Gerbern Zunfthaus und des Ulrich Zofingers des Schmieds Erben, zinst dem Kloster der Barfüsser 2 sh. alle Fronfasten, sonst frei\] um versessenen Zins wegen gefrönt."
+
 
 ## 2.2. Identifikation des *Heads*
-Der *Head* markiert das zentrale Element der Erwähnung. Welcher Teil der Erwähnung der *Head* ist,
+Der *Head* markiert das syntaktisch zentrale Element der Erwähnung. Welcher Teil der Erwähnung der *Head* ist,
 ist von der Erwähnungs-Klassifikation (Kapitel 2.3.) abhängig und wird in den dortigen Unterkapiteln erläutert.
+Die Klassifikation einer Erwähnung wiederum bezieht sich exakt auf den *Head*. Informationen ausserhalb des *Head* können wiederum selbst als Erwähnungen, Werte oder Deskriptoren erfasst werden. *Head*-Elemente können keine weiteren Annotationen enthalten.
 
 Jede Erwähnung muss genau einen *Head* aufweisen, der aber mehrere Wörtern umfassen kann.
 
@@ -40,7 +53,7 @@ Hierbei handelt es sich um eine Erwähnung der Entität anhand ihres
 Eigennamens.
 
 Beispiel: "\[<u>Hans Schneider</u>, der Karrer in Neuenburg
-gesessen\]"[^1]
+gesessen\]"
 
 Achtung, in einem solchen Fall handelt es sich nicht um eine
 Eigennamennennung:
