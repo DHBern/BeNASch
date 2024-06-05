@@ -18,12 +18,25 @@ in verschiedenen Kategorien, beschreiben in den folgenden Kapiteln und die
 Identifikation des *Heads*, indem auch dessen Grenzen im Text festgehalten werden.
 
 ## 2.1. Identifikation von Entitäten
-Eine Entitäten-Erwähnung wird dann annotiert, wenn die Entität unter eine der festgelegten Entitäten-Klassen (Kapitel TODO) fällt. 
-In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich dem Syntax. Artikel und Possessivpronomina sind z.B. explizit Teil der Erwähnung. 
+Eine Entitäten-Erwähnung wird dann annotiert, wenn die Entität unter eine der festgelegten Entitäten-Klassen (Kapitel 2.9.) fällt. 
+In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich der syntaktischen Struktur des Satzes.
+Eine Erwähnung besteht dementsprechend sowohl aus dem Kern (*Head*) sowie die diesen umgebende [[Nominalphrase]](https://de.wikipedia.org/wiki/Nominalphrase). Ein paar Beispiele um zu beschreiben, was Teil der Erwähnung ist:
+
+Beispiel: "\[Der alte <u>Schmied</u>\]"[^1]\
+Beispiel: "\[Die <u>Witwe</u> des Schmied\]"\
+Beispiel: "\[Des Schmieds <u>Witwe</u>\]"\
+Beispiel: "\[Das <u>Haus</u> in der Vorstadt\]"\
+Beispiel: "\[Das <u>Haus</u>, das in der Vorstadt liegt\]"
+
+Diese Erwähnungen können teils grosse Längen annehmen, gewisse Dokumententypen neigen dazu ihre Informationen stark zu verschachteln. Hier ein fiktives Beispiel, das aber z.B. im *Historischen Grundbuch der Stadt Basel* nicht unüblich wäre (die eckigen Klammern markieren die relevante Erwähnung):
+
+"Der Schaffner zu den Barfüssen hat \[Johannes Schmidlin des Gerbers <u>Behausung</u> samt der Schüren, genannt zum Roten Stern, gelegen in der Steinenvorstadt zwischen der Gerbern Zunfthaus und des Ulrich Zofingers des Schmieds Erben, zinst dem Kloster der Barfüsser 2 sh. alle Fronfasten, sonst frei\] um versessenen Zins wegen gefrönt."
+
 
 ## 2.2. Identifikation des *Heads*
-Der *Head* markiert das zentrale Element der Erwähnung. Welcher Teil der Erwähnung der *Head* ist,
+Der *Head* markiert das syntaktisch zentrale Element der Erwähnung. Welcher Teil der Erwähnung der *Head* ist,
 ist von der Erwähnungs-Klassifikation (Kapitel 2.3.) abhängig und wird in den dortigen Unterkapiteln erläutert.
+Die Klassifikation einer Erwähnung wiederum bezieht sich exakt auf den *Head*. Informationen ausserhalb des *Head* können wiederum selbst als Erwähnungen, Werte oder Deskriptoren erfasst werden. *Head*-Elemente können keine weiteren Annotationen enthalten.
 
 Jede Erwähnung muss genau einen *Head* aufweisen, der aber mehrere Wörtern umfassen kann.
 
@@ -40,7 +53,7 @@ Hierbei handelt es sich um eine Erwähnung der Entität anhand ihres
 Eigennamens.
 
 Beispiel: "\[<u>Hans Schneider</u>, der Karrer in Neuenburg
-gesessen\]"[^1]
+gesessen\]"
 
 Achtung, in einem solchen Fall handelt es sich nicht um eine
 Eigennamennennung:
@@ -62,7 +75,7 @@ Beispiel: "\[Der <u>Schaffner</u> des Spitals\]"
 Nominative Erwähnungen zeichnen sich oft dadurch aus, dass sie
 Informationen zur Entität enthalten, wie den Beruf oder eine Beziehung
 zu einer anderen Entität. Sie sollten in dem Fall mit einem passenden
-Subtypen gekennzeichnet werden (Kapitel 2.8.).
+Subtypen gekennzeichnet werden (Kapitel 2.9.).
 
 ### 2.3.3. Pronominale Erwähnung (PRO)
 
@@ -145,9 +158,9 @@ Beispiel: "\[Kein <u>Kohlestürzer</u>\] soll hier wohnen"
 
 ## 2.5. Entitäts-Klassifikation
 
-Die Aufzählung aller Klassen des Basis-Schemas findet sich unter 2.8.,
+Die Aufzählung aller Klassen des Basis-Schemas findet sich unter 2.9.,
 weitere Typen, die nur für bestimmte Projekte interessant sein könnten
-unter 2.9.
+unter 2.10.
 
 Ein Typus kann durch weitere Subtypen genauer definiert werden, im Falle
 von Geopolitischen Entitäten ist ein solcher sogar Pflicht.
@@ -177,9 +190,9 @@ geht"
 In BeNASch verwenden wir zur vollständigen Informationserfassung
 verschachtelte Annotationen. Zudem halten wir neben den eigentlichen
 Entitätserwähnungen auch weitere Informationen zu den Entitäten fest.
-Wir unterscheiden hierbei zwischen Referenzen, Attributen und
-Deskriptoren. Attribute und Deskriptoren können nur innerhalb von
-Referenzen und Attributen vorkommen.
+Wir unterscheiden hierbei zwischen Listen, Referenzen, Attributen und
+Deskriptoren (Kapitel 2.9.). Attribute und Deskriptoren können nur innerhalb von
+Listen, Referenzen und Attributen vorkommen.
 
 ### 2.7.1. Referenzen (REF)
 
@@ -212,8 +225,8 @@ Ammann</u>\], \[<u>Nachbarn</u> an \[der
 
 Eine Liste enthält Verweise auf alle Erwähnungen, die Teil von ihr sind
 (im obigen Beispiel also "Heintzi Schneider" und "Johann Ammann"). Ein
-Attribut kann zudem auf eine Liste verweisen, so wie sie sonst zu einer
-anderen Erwähnung gehören kann.
+Attribut oder ein Deskriptor kann zudem eine Liste beschreiben, so wie sie sonst zu einer
+anderen Erwähnung gehören können.
 
 Listen ähneln in ihrer Funktionsweise GRP-Erwähnungen, haben aber keinen
 *Head*, dieser wird durch die Aufzählung der Entitäten ersetzt. List
@@ -243,7 +256,23 @@ Ammann</u>\], \[<u>Nachbarn</u> an \[der
 
 Verbindung von Entitäten über "contra", "gegen" oder ähnliches.
 
-## 2.8. Basis-Typologie zur Entitätsklassifikation
+## 2.8. Deskriptoren (DESC)
+Text innerhalb von Entitätenerwähnungen, welche die Entität näher beschreiben, selbst aber keine Erwähnungen darstellt, wird als Deskriptor annotiert. Deskriptoren dienen in der Praxis auch dazu, Beziehungen und Ereignisse im Text zu verankern (Siehe die Anleitung in Kapitel 7 für Details).
+
+### 2.8.1. Deskriptor identifizieren
+Deskriptoren können alle Klassifizierungen nutzen, welche für Erwähnungs-Präzisierungen, Beziehungen und Ereignisse zulässig sind.Auch weitere beschreibende Spannen können als UNK-Typ verzeichnet werden, falls notwendig.
+Deskriptoren halten sich wie Entitätenerwähnungen an die Syntax. Deskriptoren entsprechen üblicherweise [[Adjektivphrasen]](https://de.wikipedia.org/wiki/Adjektivphrase). Zum Beispiel (die DESC-Spanne hier in geschweiften Klammern):
+
+Beispiel: "...hat \[das <u>Haus</u>, \{\[am <u>Rhein</u>\] gelegen\}\], gekauft."
+
+Aufgrund der speziellen Eigenschaften von vormodernem Deutsch können wir mit Deskriptoren aber auch andere beschreibende Textstellen markieren. Zum Beispiel wenn bei einem Relativsatz das einleitende Pronomen fehlt:
+
+Beispiel: "...hat \[Das <u>Haus</u>, \{\[am <u>Rhein</u>\] gelegen\}, \{zinst 5 sh. auf Martini\}\], gekauft."
+
+Beispiel: "\[Hans Peter \{selig\}\]"
+
+
+## 2.9. Basis-Typologie zur Entitätsklassifikation
 
 Als Klassen definieren wir solche Kategorien, welche für alle oder
 zumindest die meisten Projekte von Interesse sein sollten, und daher
@@ -252,7 +281,7 @@ immer annotiert werden sollten, wenn das volle Schema verwendet wird.
 Durch Unterklassen können die Klassen präziser definiert werden, wobei dies optional ist (Siehe Kapitel 2.7),
 abgesehen von den Subklassen von GPE.
 
-### 2.8.1. Übersicht (alphabetisch)
+### 2.9.1. Übersicht (alphabetisch)
 
 -   GPE (Geopolitische Entitäten)
     -   GPE (im Kontext nicht unterscheidbar)
@@ -263,7 +292,7 @@ abgesehen von den Subklassen von GPE.
 -   ORG (Organisationen)
 -   PER (Personen)
 
-### 2.8.2. Personen (PER)
+### 2.9.2. Personen (PER)
 
 Wir annotieren Erwähnungen von einer oder mehrerer Personen mit der
 PER-Abkürzung. Bei mehreren Personen ist die Unterscheidung zu beachten,
@@ -271,19 +300,22 @@ ab wann es sich nicht mehr um eine Gruppe von Personen handelt, die
 erwähnt wird, sondern um eine Organisation im Sinne einer ORG. Oft
 kann dies über die Ordinalität unterschieden werden.
 
-Beispiel PER+GRP: "\[Die <u>Schaffner</u> des Spitals\]"
+Beispiel PER+GRP: "\[Die <u>Zimmerleute</u> des Spitals\]"
 
 Beispiel ORG: "\[Die <u>Gesellschaft</u> der Schaffner des
 Spitals\]"
+
+Ein wichtiger Spezialfall ist jedoch zu beachten, wenn eine Personengruppe semantisch für die Organisation selbst steht. Ein häufiger Fall aus dem *Historischen Grundbuch der Stadt Basel* wäre z.B. die Erwähnung von Klöstern (also Organisationen) als "Die <u>Frauen von Klingenthal</u>" oder "den <u>Herren zu St. Peter</u>". Decken sich diese Erwähnungen sinngemäss mit der Erwähnung der Klöster, werden sie als Organisationen, nicht als Personengruppen, erfasst.[^3]
 
 Dazu kommt noch die Unterscheidung von GPE.PER-Erwähnungen, welche dann
 Vorrang haben, wenn Personen als Angehörige einer GPE genannt werden.
 
 Beispiel GPE.PER: "\[Die <u>Berner\]</u> gingen..."
 
-### 2.8.2.1 Erwähnungs-Präzisierungen für Personen
+### 2.9.2.1. Erwähnungs-Präzisierungen für Personen
+Hier folgen die etablierten Präzisierungen für PER-Erwähnungen. Sie sollten verwendet werden, wenn eine Entität als NOM, manchmal auch als PRO, erwähnt wird. Mehr zu Erwähnungs-Präzisierungen in Kapitel 2.3.5.
 
-#### 2.8.2.1.1. func (Funktion)
+#### 2.9.2.1.1. func (Funktion)
 
 Die Person wird durch eine langfristige Funktion beschrieben. *func*
 dient dabei als Auffang-Subtyp, präzisere Tags wie *occ* dienen für
@@ -291,7 +323,7 @@ nähere Beschreibungen der Funktion.
 
 Beispiele ???
 
-#### 2.8.2.1.2. occ (Beruf)
+#### 2.9.2.1.2. occ (Beruf)
 
 Die Person wird durch ihren Beruf beschrieben. Es handelt sich hierbei
 um eine Präzisierung von *func*. Ist nicht klar, ob es sich um einen
@@ -303,7 +335,7 @@ sagte..."
 Beispiel Erwähnungspräzisierung: "\[<u>Ulrich</u>, \[der
 <u>Zimmermann</u>\], zu \[<u>Neuenburg</u>\] gesessen\]"
 
-#### 2.8.2.1.3. org-aff (Organisationszugehörigkeit)
+#### 2.9.2.1.3. org-aff (Organisationszugehörigkeit)
 
 Die Person wird durch eine passive Zugehörigkeit zu einer Organisation
 beschrieben.
@@ -311,7 +343,7 @@ beschrieben.
 Beispiel Erwähnungspräzision: "\[ein <u>Bürger</u> zu
 \[<u>Bern</u> /REF.NAM.GPE_ORG\] /REF.NOM_ORG_AFF.PER\]"
 
-#### 2.8.2.1.4. org-job (Tätigkeit in Organisation)
+#### 2.9.2.1.4. org-job (Tätigkeit in Organisation)
 
 Die Person wird durch eine Tätigkeit für eine Organisation beschrieben.
 Es handelt sich hierbei um eine Präzisierung von *org-aff*.
@@ -319,7 +351,7 @@ Es handelt sich hierbei um eine Präzisierung von *org-aff*.
 Beispiel Erwähnungspräzision: "\[der <u>Schaffner</u> des
 \[<u>Spitals</u>\]\]"
 
-#### 2.8.2.1.5. origin (Herkunft)
+#### 2.9.2.1.5. origin (Herkunft)
 
 Die Person wird durch einen Ort beschrieben. Dabei ist nicht klar, ob es
 sich um den derzeitigen Wohnort oder Herkunftsort oder sogar einen
@@ -327,14 +359,14 @@ Beinamen handelt.
 
 Beispiel Erwähnungspräzision: "\[Der <u>Dornacher</u>\]"
 
-#### 2.8.2.1.6. owner (Besitztum)
+#### 2.9.2.1.6. owner (Besitztum)
 
 Die Person wird durch den Besitz von etwas beschrieben.
 
-#### 2.8.2.1.7. rel (Beziehung)
+#### 2.9.2.1.7. rel (Beziehung)
 
 Die Person wird durch eine langfristige Beziehung zu einer anderen
-Person oder Personengruppe (nicht ORG!) beschrieben. Kapitel 2.9.
+Person oder Personengruppe (nicht ORG!) beschrieben. Kapitel 2.10.
 schlägt Präzisierungen vor für Projekte, welche insbesondere
 interpersonelle Beziehungen untersuchen wollen.
 
@@ -342,7 +374,7 @@ Beispiel Erwähnungspräzisierung: "\[<u>Greta von Arx</u>
 \[\[<u>Elisabeth von Arx</u> \[<u>selige</u>\]\]
 <u>Tochter</u> /ATT.NOM.REL\]\]"
 
-#### 2.8.2.1.8. title (Titulierung)
+#### 2.9.2.1.8. title (Titulierung)
 
 Die Person wird durch einen Titel, den sie trägt, beschrieben. Dies
 stellt eine Präzisierung von *func* dar. Wenn ein Titel gleichzeitig
@@ -360,7 +392,7 @@ solchen auszeichnet. Gerade in späteren Dokumenten wird "Herr" hingegen
 als generelle Anrede verwendet, in welchem Fall es nicht als Titel zu
 annotieren ist.
 
-### 2.8.3. Orte (LOC)
+### 2.9.3. Orte (LOC)
 
 Ein Ort wird als eine Entität definiert, zu, durch oder an welche man
 gehen kann. Dazu zählen natürliche, fassbare, Orte wie Flüsse oder
@@ -368,15 +400,15 @@ Berge, aber auch menschengemachte Strukturen wie Häuser, Strassen und
 Brücken, sowie nicht fassbare Konzepte wie geographische Regionen, solange sie
 nicht gleichzeitig politische Entitäten sind.
 
-In Kapitel 2.9. finden sich Richtlinien für präzisere Klassifizierungen
+In Kapitel 2.10. finden sich Richtlinien für präzisere Klassifizierungen
 von Orten, wie z.B. ein separater FAC-Tag für menschengemachte
 Strukturen, sollte ein Projekt diese Unterscheidung wünschen.
 
-### 2.8.3.1. Erwähnungs-Präzisierungen für Orte
+### 2.9.3.1. Erwähnungs-Präzisierungen für Orte
 
 Bisher gab es keinen Bedarf dafür.
 
-### 2.8.4. Organisationen (ORG)
+### 2.9.4. Organisationen (ORG)
 
 Organisationen unterscheiden sich von Gruppen, indem sie meist einen
 Eigennamen besitzen und langfristige, etablierte Entitäten darstellen.
@@ -385,7 +417,7 @@ Definition erklären, welche sich auf den "offiziellen" Status einer
 Gruppierung bezieht. Insofern würden wir sagen, dass es sich dabei um
 eine zu ihrer Zeit anerkannte Organisation handeln sollte.
 
-In Kapitel 2.9. werden Richtlinien für genauere Kategorisierungen von
+In Kapitel 2.10. werden Richtlinien für genauere Kategorisierungen von
 Organisationen genannt, welche für gewisse Projekte wünschenswert sein
 könnten, z.B. REL für Religiöse Organisationen wie Klöster oder Stifte.
 
@@ -400,11 +432,11 @@ verbunden sein können. So existiert ein Kloster meist sowohl als
 Organisation (der Orden) wie auch als Ort (das Gebäude). Diese
 Erwähnungen sind jeweils entsprechend ihres Kontexts zu annotieren.
 
-### 2.8.4.1. Erwähnungs-Präzisierungen und Deskriptoren für Organisationen
+### 2.9.4.1. Erwähnungs-Präzisierungen und Deskriptoren für Organisationen
 
 Bisher gab es keinen Bedarf dafür.
 
-### 2.8.5. Geopolitische Entitäten (GPE)
+### 2.9.5. Geopolitische Entitäten (GPE)
 
 Geopolitische Entitäten unterscheiden sich von anderen Entitäten in der
 Hinsicht, dass dieselbe Entität sowohl in ihrer Rolle als Ort, als
@@ -413,7 +445,7 @@ verwenden in jedem Kontext die Annotation *GPE*, aber versehen diese mit
 einem entsprechenden Subtyp. Dieses Problem wird in den ACE-Guidelines
 genauer besprochen, wir fassen es hier aber nochmal zusammen.
 
-#### 2.8.5.1. GPE
+#### 2.9.5.1. GPE
 
 In manchen Fällen wird die GPE direkt referenziert. In diesem Fall
 verwenden wir GPE.GPE als Annotation.
@@ -422,7 +454,7 @@ Beispiel: "Es unterschreiben \[die <u>Orte</u>
 \[<u>Basel</u>\], \[<u>Bern</u>\],
 \[<u>Zürich</u>\]\]"
 
-#### 2.8.5.2. LOC
+#### 2.9.5.2. LOC
 
 Wird die GPE im Sinne einer LOC genannt, verwenden wir GPE.LOC.
 
@@ -432,7 +464,7 @@ gesessen zu \[<u>Neuenburg</u>\]\]"
 Wir verwenden in diesem Fall die Subtypen, welche auch für LOC-Entitäten
 gelten.
 
-#### 2.8.5.3. ORG
+#### 2.9.5.3. ORG
 
 Wird die GPE im Sinne einer ORG genannt, verwenden wir GPE.ORG.
 
@@ -441,17 +473,17 @@ Beispiel: "\[<u>Bürger</u> zu \[<u>Basel</u>\]\]
 Wir verwenden in diesem Fall die Subtypen, welche auch für ORG-Entitäten
 gelten.
 
-#### 2.8.5.4. PER
+#### 2.9.5.4. PER
 
 Wird die Bevölkerung einer Stadt referenziert, verwenden wir GPE.PER.
 
 Beispiel: "\[Die <u>Berner</u>\]"
 
-## 2.9. Optionale Entitäts-Klassen
+## 2.10. Optionale Entitäts-Klassen
 
-### 2.9.1. LOC-Subtypen
+### 2.10.1. LOC-Subtypen
 
-#### 2.9.1.1. Menschengemachte Strukturen (FAC)
+#### 2.10.1.1. Menschengemachte Strukturen (FAC)
 
 Mit FAC werden Orte annotiert, die von Menschen geschaffen wurden. Das
 schliesst sowohl Gebäude als auch Strassen und Plätze ein.
@@ -459,32 +491,32 @@ schliesst sowohl Gebäude als auch Strassen und Plätze ein.
 Beispiel: "\[Die <u>Behausung</u> in \[der <u>S. Alban
 Vorstatt</u>\]\]"
 
-#### 2.9.1.2. Wasserkörper (WAT)
+#### 2.10.1.2. Wasserkörper (WAT)
 
-#### 2.9.1.3. Natürliche Region (GEO)
+#### 2.10.1.3. Natürliche Region (GEO)
 
 Natürliche Regionen sind definiert durch geologische oder ökologische
 Eigenheiten. Dazu zählen z.B. Berge, Gebirge, aber auch Wälder.
 
-#### 2.9.1.4. Künstliche Region (REG)
+#### 2.10.1.4. Künstliche Region (REG)
 
 Künstliche Regionen definieren sich nicht primär durch geologische oder
 ökologische Eigenheiten, stellen aber auch keine geopolitischen
 Entitäten dar. Denkbar wären hier z.B. "das Zürichgau".
 
-#### 2.9.1.5. Himmelskörper (ASTR)
+#### 2.10.1.5. Himmelskörper (ASTR)
 
 Mit ASTR werden Erwähnungen von Himmelskörpern gekennzeichnet. "Die
 Sonne", "Der Mond".
 
-#### 2.9.1.6. Grenze (BOR)
+#### 2.10.1.6. Grenze (BOR)
 
 Mit BOR werden Orte gekennzeichnet, die Grenzen zwischen anderen Orten
 darstellen, insbesondere zwischen GPEs.
 
-### 2.9.2. ORG-Subtypen
+### 2.10.2. ORG-Subtypen
 
-#### 2.9.2.1. Regierungsorganisationen (GOV)
+#### 2.10.2.1. Regierungsorganisationen (GOV)
 
 Mit GOV werden Erwähnungen annotiert, die nicht Regierungen als ganzes
 betreffen (dazu ist GPE_ORG da), sondern nur Teile der Regierung, selbst
@@ -493,29 +525,29 @@ wenn diese eine führende Position innehaben.
 Beispiel: "\[Mr . <u>Lienhart Bientz</u> \[der
 <u>Rebman</u>\], \[des <u>Rats</u> /NOM.ORG_GOV\]\]"
 
-#### 2.9.2.2. Religiöse Organisationen (REL)
+#### 2.10.2.2. Religiöse Organisationen (REL)
 
 Unter REL fallen Organisationen wie Stifte und Klöster.
 
 Beispiel: "\... zinst von eigenschaft zu \[<u>S. Claren</u>\]"
 
-#### 2.9.2.3. Zünfte, Berufsverbände (OCC)
+#### 2.10.2.3. Zünfte, Berufsverbände (OCC)
 
 Mit OCC werden Erwähnungen, die auf Zünfte und Berufsverbände verweisen,
 annotiert.
 
-#### 2.9.2.4. Familien (FAM)
+#### 2.10.2.4. Familien (FAM)
 
-### 2.9.3. PER: *rel*-Präzisierungen
+### 2.10.3. PER: *rel*-Präzisierungen
 
-#### 2.9.3.1. Verwandtschaft (family)
+#### 2.10.3.1. Verwandtschaft (family)
 
 Unter diese Präzisierung fallen Bezeichnung, die der heutigen Definition
 einer familiären Beziehung entsprechen, also Geschwister, Eltern,
 Kinder, etc. Für die Bezeichnung einer Person durch die Ehe oder festen
 Partnerschaft zu einer anderen Person gibt es zudem den Tag *married*
 
-#### 2.9.3.2. Verheiratet (married)
+#### 2.10.3.2. Verheiratet (married)
 
 Unter married fallen Beschreibungen von Personen durch feste
 Partnerschaften oder Ehe.
@@ -523,9 +555,9 @@ Partnerschaften oder Ehe.
 Beispiel: "\[<u>Jerg Holzman</u>\], und \[\[<u>seine</u>\]
 <u>Frau</u> /NOM.PER.married\]"
 
-## 2.8. Komplizierte Fälle
+## 2.11. Komplizierte Fälle
 
-### 2.8.1 Mehrere Personen mit nur einem genannten Nachnamen
+### 2.11.1 Mehrere Personen mit nur einem genannten Nachnamen
 
 Beispiel: "Hedwig und Bertschi Eberli"
 
@@ -544,3 +576,5 @@ Für weitere Informationen siehe [Diskussion](https://github.com/raykyn/BeNASch/
     relevant sind.
 
 [^2]: Hinter dem / steht eine allfällige Klassifizierung.
+
+[^3]: [[Diskussion: Personengruppen, die ORGs repräsentieren]](https://github.com/raykyn/BeNASch/issues/2)
