@@ -10,7 +10,7 @@ In BeNASch annotieren wir Beziehungen und Ereignisse mit derselben Methode.
 
 Wir unterscheiden zwischen zwei Komplexitätsstufen der Annotation. Ein Projekt sollte für jede Beziehungs- und Ereignis-Klasse, die verwendet wird, bestimmen, ob die einfache Annotation ausreicht, oder von der vollen Annotation Gebrauch gemacht werden sollte. 
 
-{.note}
+{: .note}
 Die einfache Annotation ist Teil des offiziellen BeNASch-Schemas und ihre Verwendung bedeutet keinen Bruch mit dem Schema.
 
 ## 4.1 Annotationsebene
@@ -72,7 +72,7 @@ Beispiel Satzebene: "\[das Kloster hat wegen versessener Zinsen Uelis Haus <u>ge
 
 Beispiel Erwähnungsebene: "\[seine <u>Frau</u>\]
 
-{.note}
+{: .note}
 Erwähnungspräzisierungen implizieren oft eine Beziehung oder ein Ereignis, ein Fakt, den wir uns während der Annotation zu Nutze machen können.
 
 Jede Beziehung und jedes Ereignis definiert in seiner vollen Annotation <b>Rollen</b>, welche Entitäten oder Werten zugewiesen werden. Es definiert auch, wie oft eine Rolle jeweils vorkommen kann, und ob gewisse Rollen optional sind. Zudem existiert eine Zahl generischer Rollen, welche alle Beziehungen oder Ereignisse (optional) aufweisen.
