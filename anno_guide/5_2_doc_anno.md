@@ -1,11 +1,11 @@
 ---
-title: 7.2. Annotation in INCEpTION
+title: 5.2. Annotation in INCEpTION
 layout: default
 nav_order: 2
-parent: 7. Annotations-Anleitung
+parent: 5. Annotations-Anleitung
 ---
 
-# 7.2. Annotation in INCEpTION
+# 6.2. Annotation in INCEpTION
 
 In diesem Guide wird im Detail erklärt, wie ein Dokument in Inception annotiert werden sollte, damit es durch das BeNASch-assoziierte Postprocessing korrekt verarbeitet werden kann. Die hier empfohlene Methode der Annotation zielt darauf ab, möglichst weniger "überflüssige" Tags setzen zu müssen.
 

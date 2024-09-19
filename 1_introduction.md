@@ -137,14 +137,14 @@ gewidmet ihr Haus & Hofstatt in der Aeschenvorstadt"
 In diesem Text erkennen wir die folgenden Entitäten-Erwähnungen:
 
 REF.NAM.PER: **Diebolt Rüly** der Küfer
----
+* * *
 - REF ist der allgemeine Marker für Entitätenerwähnungen, die keine Attribute sind.
 - NAM steht für *named*, also eine Entität, die anhand ihres Eigennamens erwähnt wird.
 - PER steht für *person*, da es sich hierbei um eine Person handelt.
 - *Diebolt Rüly* ist der *Head*, der Kern, der Erwähnung. Alle Entitätenerwähnungen müssen genau eine *Head*-Spanne aufweisen.
 
 ATT.NOM.PER.OCC: der **Küfer**
----
+* * *
 - ATT ist der Marker für Erwähnungen, die aber "nur" die ihr übergeordnete Erwähnung, in dem Fall die des Diebolt Rüly, beschreiben.
 - NOM steht für *nominative*, also eine Entität, die anhand eines Nomens beschrieben wird.
 - Es handelt sich erneut um eine Person, erhält also die PER-Klassifikation.
@@ -155,27 +155,27 @@ ATT.NOM.PER.OCC: der **Küfer**
 REF.NAM.PER: seine Frau **Agnes**
 
 ATT.NOM.PER.FAM: seine **Frau**
----
+* * *
 - Hier handelt es sich um ein Attribut, wie schon der Beruf bei Diebolt. In diesem Fall aber is die Erwähnungspräzisierung vom Typen FAM (family) statt OCC.
 
 REF.PRO.PER: **seine**
----
+* * *
 - Diese Pronominalnennung (PRO) bezieht sich auf Diebolt und wird in der Beziehungsannotation wichtig.
 
 REF.PRO.PER: **einander**
 
 REF.NOM.LOC: ihr **Haus & Hofstatt** in der Aeschenvorstadt
----
+* * *
 - Beachte, dass wir die gesamte Spanne samt der Beschreibung, wo das Haus liegt, mit einschliessen. Alles, was syntaktisch Teil der Nominalphrase rund um *Haus & Hofstatt* ist, ist Teil der Erwähnung!
 - LOC steht für *location*.
 - Wir annotieren die gesamte Phrase *Haus & Hofstatt* als eine einzelne Erwähnung, da es sich bei dieser Formulierung um ein und dieselbe Entität handelt, nicht um mehrere verschiedene Entitäten.
 
 REF.PRO.PER.GRP: **ihr**
----
+* * *
 - Auch Possessiva werden als PRO annotiert und sind erneut sehr wichtig bei der Annotation der Beziehungen.
 
 REF.NAM.LOC: der **Aeschenvorstadt**
----
+* * *
 - Bemerke, dass auch der Artikel Teil der Erwähnung ist.
 
 ![Annotation Example with Entities](./static/images/example_entities.png)
@@ -186,29 +186,29 @@ Mit Deskriptoren können wir weitere Beschreibungen von Entitäten erfassen, auc
 In der Erwähnung "ihr Haus und Hofstatt in der Aeschenvorstadt" sind folgende Deskriptorne zu annotieren:
 
 DESC.OWNER: ihr (in "ihr Haus & Hofstatt ...")
----
+* * *
 - DESC ist der Marker für Deskriptoren.
 - OWNER steht für eine Beschreibung der Besitzverhältnisse der Entität.
 - Dieser Deskriptor impliziert gleichzeit eine OWNERSHIP-Beziehung (siehe nächstes Kapitel)
 
 DESC.LOC: **in** der Aeschenvorstadt
----
+* * *
 - LOC steht für eine Beschreibung der Lage, bei einer Personenerwähnung kann es auch die Herkunft oder den Wohnort beschreiben. Wir können das LOC präzisieren, falls wir die Lage genauer beschreiben möchten (z.B. LOC_IN).
 
 ![Annotation Example with Descriptors](./static/images/example_desc.png)
 
-### 1.8.4. Beziehungen
-Beziehungen beschreiben Verhältnisse zwischen Entitäten. Die Textstrings hier beziehen sich auf die in 1.8.2. definierten Erwähnungen:
+### 1.8.4. Einfache Beziehungen
+Beziehungen beschreiben Verhältnisse zwischen Entitäten. In diesem Beispiel finden wir mehrere Beziehungen, die wir _einfach_ annotieren können. Dies bedeutet, dass sie nur aus zwei verbundenen Erwähnungen und einer Klassifikation ihrer Beziehung bestehen. Würden wir komplexere Verhältnisse annotieren wollen, müssten wir auf _volle_ Annotation zurückgreifen. Die Textstrings hier beziehen sich auf die in 1.8.2. definierten Erwähnungen:
 
 REL.FAM: "seine Frau" &rarr; "seine"
----
+* * *
 - REL ist der Marker für Beziehungen.
 - FAM steht wie bei der Erwähnungspräzision in 1.8.2. für *family*.
 - Wir machen uns diese Überschneidung zu Nutze und müssen im empfohlenen Workflow nur das Attribut annotieren, die Beziehung wird dadurch impliziert und im Postprocessing erzeugt.
 - Da wir textnah annotieren, findet die Beziehung nur zwischen dem Attribut und dem unmittelbaren Pronomen statt, die Verbindung auf "Diebolt Rüly" findet erst in einem nächsten Schritt statt.
 
 REL.OWNERSHIP: ihr &rarr; "ihr Haus & Hofstatt ..."
----
+* * *
 - Auch hier können wir uns die Überschneidung mit dem Deskriptor zu Nutze machen.
 
 REL.LOC: "ihr Haus & Hofstatt ..." &rarr; "der Aeschenvorstatt"
@@ -223,7 +223,7 @@ COREF: "einander" &rarr; "seine Frau Agnes"
 
 COREF: "ihr" &rarr; "Diebolt Rüly der Küfer"
 COREF: "ihr" &rarr; "seine Frau Agnes"
----
+* * *
 - Da es sich bei "ihr" und "einander" um Erwähnungen mehrerer Entitäten handelt, können wir auch mehrere COREFs setzen.
 - Falls Listen-Elemente verwendet werden, kann die COREF einfach auf die Liste gesetzt werden, die dann sowohl Diebolt wie auch Agnes umfassen würde. In diesem Beispiel wurde auf Listen der einfachheit halber verzichtet.
 - Sind diese Koreferenzen markiert, ist nun auch klar, wie z.B. die Familienbeziehung zwischen Agnes und Diebolt repräsentiert wird.
@@ -235,11 +235,11 @@ COREF: "ihr" &rarr; "seine Frau Agnes"
 ![Annotation Example with Coreferences](./static/images/example_coref.png)
 Bemerke, dass wir die Beziehungen REL.FAM, REL.OWNERSHIP und REL.LOC nicht nochmal annotieren müssen, sie werden durch die Attribute und Deskriptoren bereits verzeichnet. Beziehungen, die ausserhalb von Erwähnungen stattfinden (z.b. "Diebolt ist verheiratet mit Agnes") müssten wir hingegen explizit verzeichnen.
 
-### 1.8.5. Ereignisse
-Welche Ereignisse genau erfasst werden, muss jedes Projekt für sich entscheiden, wobei wir im Kapitel zu Modulen dazu einige Anregungen geben. In diesem Beispiel findet sich ein Ereignis:
+### 1.8.5. Voll annotierte Ereignisse
+Wie bei Beziehungen unterscheiden wir Annotation von Ereignissen in _einfacher_ und _voller_ Annotation. Je nach Definition unserer Ereignisse könnten wir hier ein Widmungs-Ereignis in _voller_ Annotation auszeichnen:
 
 EV.BEQUEST:
----
+* * *
 - Spanne: Der ganze Satz
 - Trigger: "gewidmet"
     - Der Trigger sollte möglichst kurz sein und sogleich das Ereignis möglichst gut beschreiben. Für die Wahl der Trigger siehe das Kapitel zur Ereignisannotation.
