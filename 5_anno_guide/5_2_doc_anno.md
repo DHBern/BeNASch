@@ -5,25 +5,24 @@ nav_order: 2
 parent: 5. Annotations-Anleitung
 ---
 
-# 6.2. Annotation in INCEpTION
+# 5.2. Annotation in INCEpTION
 
 In diesem Guide wird im Detail erklärt, wie ein Dokument in Inception annotiert werden sollte, damit es durch das BeNASch-assoziierte Postprocessing korrekt verarbeitet werden kann. Die hier empfohlene Methode der Annotation zielt darauf ab, möglichst weniger "überflüssige" Tags setzen zu müssen.
 
-Es wird angenommen, dass ein Projekt nach den Empfehlungen in Kapitel 7.1. aufgesetzt wurde und die entsprechenden Layer "Span" und "Relation" vorhanden sind.
+Es wird angenommen, dass ein Projekt nach den Empfehlungen in Kapitel 5.1. aufgesetzt wurde und die entsprechenden Layer "Span" und "Relation" vorhanden sind.
 
 ## Entitäten annotieren
 
-
 ### Textspanne markieren
 
-{: .note } Wir empfehlen, das "Span"-Layer auf Token-basierte Annotation zu setzen. Dies ermöglicht etwas schnelleres Markieren der Textspannen, weil nicht exakt die Endungen der Wörter markiert werden müssen. Durch Doppelklick kann ein Token schnell angewählt und annotiert werden.
+[!TIP]
+Wir empfehlen, das "Span"-Layer auf Token-basierte Annotation zu setzen. Dies ermöglicht etwas schnelleres Markieren der Textspannen, weil nicht exakt die Endungen der Wörter markiert werden müssen. Durch Doppelklick kann ein Token schnell angewählt und annotiert werden.
 
-Im Schema wurde es zwar schon erwähnt, aber wir annotieren in diesem Schema immer "lange" Spannen. Das entspricht üblicherweise den Grenzen der jeweiligen [[Nominalphrase]](https://de.wikipedia.org/wiki/Nominalphrase). Es sollte ausserdem nicht vergessen, den Kopf (HEAD) zu markieren und zu annotieren (jede Entitätenerwähnung, egal ob Referenz oder Attribut, muss genau einen HEAD aufweisen!).
-
+Im Schema wurde es zwar schon erwähnt, aber wir annotieren in diesem Schema immer "lange" Spannen. Das entspricht üblicherweise den Grenzen der jeweiligen [[Nominalphrase]](https://de.wikipedia.org/wiki/Nominalphrase). Es sollte ausserdem nicht vergessen werden, den Kopf (HEAD) zu markieren und zu annotieren (jede Entitätenerwähnung, egal ob Referenz oder Attribut, muss genau einen HEAD aufweisen!).
 
 ### Label setzen
 
-Um den Annotationsprozess zu beschleunigen, verzichtet das Projekt darauf, für jede Klassifikation von Entitäten mehrere Felder zu verwenden. Stattdessen werden alle Informationen unter dem Feature "Label" verzeichnet. Die verwendeten Abkürzungen entsprechen übrigens denen, die im Schema jeweils in Klammern stehen.
+Um den Annotationsprozess zu beschleunigen, verzichtet das Projekt darauf, für jede Klassifikation von Entitäten mehrere Felder zu verwenden. Stattdessen werden alle Informationen unter dem Feature "Label" verzeichnet. Die verwendeten Abkürzungen entsprechen denen, die im Schema jeweils in Klammern stehen.
 
 Für Referenzen folgt diese Annotation dem folgenden Schema:
 - Erwähnungs-Klassifikation
@@ -51,7 +50,8 @@ Die optionalen Klassifikationen müssen nur annotiert werden, wenn sie vom Stand
 | Ordinalität | Singular (SGL) |
 | Spezifität | Spezifisch (SPC) |
 
-{: .note } Im Postprocessing können die Standard-Werte in "schema_info.json" angepasst werden.
+[!TIP]
+Im Postprocessing können die Standard-Werte in "schema_info.json" angepasst werden.
 
 Pronomina können sogar noch weiter verkürzt werden, solange sie eine Koreferenz zu einem Label aufweisen, welches die vollen Informationen aufweist. Ein PRO reicht in dem Fall aus.
 
@@ -65,67 +65,49 @@ Ein Dokument könnte nach diesem Schritt folgendermassen aussehen:
 
 ## Deskriptoren annotieren
 
-
 ### Textspanne markieren
-
 Auch Deskriptoren sollten der Syntax des Satzes folgen. Es sollte nicht vergessen werden, dass auch Pronomina Entitätenerwähnungen darstellen, und daher nicht als Deskriptoren, sondern als Attribute zu annotieren sind.
 
-Das Setzen eines "Key" ist in der derzeitigen BeNASch-Version nicht obligatorisch.
+Falls der Deskriptor ein Ereignis oder einen Zustand markiert, ist es in diesem Schritt bereits ratsam einen Trigger und etwaige Rollen zu markieren.
 
 ### Label setzen
-
 Die Auswahl an möglichen Deskriptoren ist gross, da sie auch alle Typen von Relationen und Ereignissen abdeckt. Deskriptoren werden mit "desc" eingeleitet, danach folgt der Typus des Deskriptors.
 
 ### Beispiel
-
 Ein Dokument könnte nach diesem Schritt folgendermassen aussehen:
 
 ![Annotation Example with Descriptors](../static/images/example_desc.png)
 
+## Koreferenzen setzen
+Wir können Koreferenzen, durch eine Linie zwischen zwei Erwähnungen darstellen. Dazu ziehen wir einfach mit gedrückter linker Maustaste den Pfeil von der einen Erwähnung zu der anderen Erwähnung und schreiben "coref" in das Feld "Label". Eine Lösung per ID (da die Pfeile den Bildschirm teils sehr unübersichtlich machen) ist in Arbeit, aber noch nicht im Postprocessing implementiert.
 
-## Relationen annotieren
+## Annotation von einfachen Beziehungen und Ereignissen
+Als "einfach" sind Zustände und Ereignisse zu verstehen, die nur aus zwei Rollen bestehen, und ev. einem Trigger.
 
+Falls sie in einer Verschachtelung vorkommen, müssen sie oft gar nicht explizit annotiert werden.
+Im Beispiel unten z.B. sehen wir die Beziehung vom Typus FAM im Attribut "seine Frau" enthalten. Das Postprocessing produziert daraus die Beziehung *"seine **Frau**" hat Beziehung FAM mit "**seine**"*. Also: das Postprocessing erzeugt eine beliebige Anzahl Beziehungen mit dem gleichen Typus wie dem des Attributs, welche das Attribut selbst mit allen Entitätenerwähnungen, die im Attribut stehen, verbinden.\
+Die Wiedergabe durch Deskriptoren funktioniert ähnlich. Nur wird in diesem Fall die Entität, welche durch den Deskriptor beschrieben wird, mit der (oder den Entitäten), die innerhalb des Deskriptors stehen, verbunden. Im Beispiel unten wird also das "Haus & Hof" mit der "Aeschenvorstadt" durch eine Beziehung des Typus "loc" im Postprocessing generiert.\
+Die Zuweisung der Rollen wird (coming soon) aus der Projektspezifikation abgeleitet. Bei einer gerichteten Beziehung wie OWNERSHIP z.B. können wir definieren, dass immer die beteiligte PER- oder ORG-Erwähnung die besitzende Rolle inne hat, während die LOC besitzt wird. Besteht Ambiguität, wie z.B. zwei ORGs in einer OWNERSHIP-Beziehung, müssen die Rollen explizit annotiert werden, ansonsten meldet das Postprocessing dies als eine Unklarheit, die händisch nachbearbeitet werden muss. Zur expliziten Annotation von Rollen siehe weiter unten.
 
-### Zur Erinnerung
-
-Eine Relation besteht immer aus zwei Entitätenerwähnungen und einem Typus.
-
-
-### Relationen und Koreferenzen per Linie setzen
-
-Wir können Relationen, insbesondere wenn sie nicht in einer verschachtelten Erwähnung stattfindet, durch eine Linie zwischen zwei Erwähnungen darstellen. Dazu ziehen wir einfach mit gedrückter linker Maustaste den Pfeil von der einen Erwähnung zu der anderen Erwähnung und schreiben den Typus in das Feld "Label" (Kein rel. oder so notwendig).
-
-
-### Relationen in Attributen und Deskriptoren
-
-Findet die Beziehung innerhalb einer verschachtelten Erwähnung statt, wird sie entweder durch ein Attribut oder einen Deskriptor repräsentiert. 
-
-Im Beispiel unten z.B. sehen wir die Beziehung vom Typus FAM im Attribut "seine Frau" enthalten. Das Postprocessing produziert daraus die Beziehung *"seine **Frau**" hat Beziehung FAM mit "**seine**"*. Also: das Postprocessing erzeugt eine beliebige Anzahl Beziehungen mit dem gleichen Typus wie dem des Attributs, welche das Attribut selbst mit allen Entitätenerwähnungen, die im Attribut stehen, verbinden.
-
-Die Wiedergabe durch Deskriptoren funktioniert ähnlich. Nur wird in diesem Fall die Entität, welche durch den Deskriptor beschrieben wird, mit der (oder den Entitäten), die innerhalb des Deskriptors stehen, verbunden. Im Beispiel unten wird also das "Haus & Hof" mit der "Aeschenvorstadt" durch eine Beziehung des Typus "loc" im Postprocessing generiert.
-
-
-### Gerichtete Beziehungen
-
-Viele Beziehungen sind gerichtet (siehe Beziehungstypologie in Kapitel 4). Wird die Beziehung per Pfeil gesetzt, sollte die Beziehung in Richtung Pfeil gelesen werden. z.B. "Hans arbeitet beim Spital". Ist die Beziehung verschachtelt gilt die Richtung von der äusseren Spanne zur inneren Spanne (z.B. "[**Hans**, [**Schaffner** des [**Spitals**]]]" => Hans arbeitet beim Spital). Noch besser ist es, bei gerichteten Beziehungen die Rollen direkt zu benutzen, z.B. bei einem Schuldverhältnis "Creditor" und "Debitor".
+Ausserhalb von Verschachtelungen können einfache Beziehungen / Ereignisse wie Koreferenzen per Pfeil markiert werden, das Label sollte dann den Typ der Beziehung wiedergeben.
 
 
 ### Beispiel
-
 Ein Dokument könnte nach diesem Schritt folgendermassen aussehen:
 
 ![Annotation Example with Coreferences](../static/images/example_coref.png)
 
 
-## Ereignisse annotieren
+## Explizite Annotation von Zuständen und Ereignissen
 
 ### Zur Erinnerung
-Ein Ereignis besteht aus einer Ereignis-Spanne, welche einer bestimmten syntaktischen Einheit entspricht, einem Ereignis-*Trigger* und einer vom Ereignis abhängigen Anzahl von assoziierten Rollen.
+Ein Ereignis oder ein Zustand werden gemäss Projektspezifikation annotiert. In diesem Fall nehmen wir an, dass im Beispiel alle Elemente, Textspanne, Trigger und Rollen annotiert werden müssen. Alles im Folgenden gilt auch für die Annotation von Zuständen.
 
 ### Grundlegendes
-Die Ereignis-Spanne wird im "Label"-Feature mit dem Präfix "evspan" gekennzeichnet. Darauf folgt der Ereignis-Typus. Die Ereignis-Spanne kann weggelassen werden (wie im Beispiel unten), dann setzt das Postprocessing die Spanne automatisch von der ersten Rolle/Trigger bis zur letzten Rolle/Trigger im Text.
+Die Ereignis-Spanne wird im "Label"-Feature mit dem Präfix "evspan" gekennzeichnet. Darauf folgt der Ereignis-Typus. 
+Die Ereignis-Spanne kann weggelassen werden (wie im Beispiel unten) wenn vom Projekt erlaubt, dann setzt das Postprocessing die Spanne automatisch von der ersten Rolle/Trigger bis zur letzten Rolle/Trigger im Text. Ist unser Ereignis in einer Referenz, einem Attribut oder einem Deskriptor verankert, gilt dieselbe Textspanne wie das Anker-Element.
 
-Der Trigger wird wie eine Entität oder Deskriptor gesetzt und im "Label"-Feature mit dem Präfix "ev" markiert. Ein Ereignis kann in seltenen Fällen ohne Trigger auftreten. Dann ist es wichtig den Ereignis-Typus zumindest in der Ereignis-Spanne festzuhalten.
+Der Trigger wird wie eine Entität oder Deskriptor gesetzt und im "Label"-Feature mit dem Präfix "ev" markiert. Ein Ereignis kann in seltenen Fällen ohne Trigger auftreten. Wird oder kann kein Trigger annotiert werden, empfiehlt es sich die Ereignis-Spanne zu setzen, um trotzdem den Ereignis-Typ angeben zu können. Existiert ein Anker-Element, kann der Ereignis-Typ vermutlich (je nach Projektspezifikation) vom Anker-Element abgeleitet werden.
 
 Für Rollen verwenden wir das "Role"-Feature. Dort wird die Role einfach eingeschrieben. Auch Ereignis-Spannen und/oder Trigger können eine Rolle in einem anderen Ereignis erhalten.
 
@@ -147,11 +129,9 @@ Hier entstehen die folgenden (Unter-)Ereignisse:\
 120: Zins an St. Martin von 2 Gulden.\
 130: Zins an Christiana Herbsterin von 5 Pfund.
 
-### Ereignisse in Deskriptoren und Attributen
-Wie Relationen können auch Ereignisse durch Deskriptoren und Attribute repräsentiert werden, wodurch wir uns etwas Annotation sparen können. Hierbei gilt: Ist kein Trigger annotiert, wird der Key des Deskriptors bzw. der Head des Attributs vom Postprocessing als Trigger angenommen. In einer Setting-Datei (noch nicht implementiert) wird zudem weiteres automatisiertes Verhalten definiert, z.B. deutet ein Deskriptor vom Typus "due" nicht nur die Beschreibung des Zinsverhältnis innerhalb einer Hausbeschreibung an, sondern auch, dass das Haus die Rolle "property" im Ereignis erhält.
-
-Ereignisse, die durch Deskriptoren oder Attribute verzeichnet werden, müssen in einer Setting-Datei verzeichnet werden, schon nur um sie von Relationen unterscheiden zu können.
-
+### Anker-Elemente
+Anker-Elemente ersparen uns doppelten Annotationsaufwand.
+Einiges wurde schon erwähnt, explizit gilt: Ist kein Trigger annotiert, wird der Head des Attributs oder der Referenz vom Postprocessing als Trigger angenommen. In einer Setting-Datei (noch nicht implementiert) wird zudem weiteres automatisiertes Verhalten definiert, z.B. deutet ein Deskriptor vom Typus "due" nicht nur die Beschreibung des Zinsverhältnis innerhalb einer Hausbeschreibung an, sondern auch, dass das Haus die Rolle "property" im Ereignis erhält.
 
 ### Beispiel
 
