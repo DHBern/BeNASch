@@ -1,11 +1,11 @@
 ---
 title: 5. Annotations-Anleitung
 layout: default
-nav_order: 5
+nav_order: 6
 has_children: true
 ---
 
-# 7. Annotations-Anleitung
+# 5. Annotations-Anleitung
 
 Auf dieser Seite findet sich eine Schritt-für-Schritt-Anleitung, wie 
 1. ein Projekt in INCEpTION aufgesetzt wird. (In Arbeit)
