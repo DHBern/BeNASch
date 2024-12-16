@@ -102,7 +102,7 @@ Beispiel Satzebene: "\[das Kloster hat wegen versessener Zinsen Uelis Haus <u>ge
 
 Beispiel Erwähnungsebene: "\[seine <u>Frau</u>\]
 
-[!TIP]
+{: .note}
 Erwähnungspräzisierungen implizieren oft eine Beziehung oder ein Ereignis, ein Fakt, den wir uns während der Annotation zu Nutze machen können.
 
 ### 4.3.3. Rollen
