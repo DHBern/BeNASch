@@ -9,7 +9,7 @@ nav_order: 4
 Werte folgen nicht denselben Regeln wie Entitätserwähnungen. Sie können
 Textspannen auszeichnen, die in irgendeiner Hinsicht für die Forschung
 relevant sein könnten und oft sind sie auch relevant als
-Anknüpfungspunkt für Beziehungen und Ereignissen, wobei sie dadurch auch
+Anknüpfungspunkt für Zustände und Ereignissen, wobei sie dadurch auch
 mit Entitätserwähnungen verknüpft werden können.
 
 Werte haben keine *head*-Elemente.

@@ -23,3 +23,19 @@ die Mitsprache und Perspektiven von ausserhalb dieses Kreises sind aber äussers
 Oben rechts findet sich ein Link zum [Github-Repository des Projekts](https://github.com/DHBern/BeNASch/), darin können über das [Issues](https://github.com/DHBern/BeNASch/issues/) oder das [Discussions](https://github.com/DHBern/BeNASch/discussions/)-Tab Änderungsvorschläge vorgebracht oder Diskussionen angestossen werden.
 Wer sich mit Git auskennt, darf z.B. Tippfehler, Umformulierungen oder Ergänzungen an Beispielen
 auch gerne per Pull-Request einreichen.
+
+## Neuigkeiten
+
+### BeNASch-Workshop im Januar 2025
+Wir laden herzlich interessierte Forscher:innen zum ersten Workshop rund um das BeNASch-Schema ein, welcher am 23. und 24. Januar 2025 stattfinden wird. Der Workshop findet in Bern statt und ist kostenlos, alle weiteren Infos gibt es [hier](https://www.dh.unibe.ch/forschung/benasch/index_ger.html).
+
+### Regelmässige Meetings
+Meetings zur Diskussion von Punkten aus dem Github-Forum finden alle zwei Wochen statt (siehe Forum). Bei Interesse bitte bei den Admins melden, wir freuen uns über jede zusätzliche Teilnehmer:in!
+
+## Änderungsprotokoll
+
+### November 2024
+(für genaues Changelog siehe Github Repo)
+- Umbenennung von Beziehungen in Zustände, Beziehungen bezeichnen Zustände mit mehr als einer beteiligten Entität.
+- Entgliederung der Entitäten-Typologie aus der Entitäten-Annotation für bessere Übersichtlichkeit.
+- Einführung der Unterscheidung zwischen direkten und indirekten Koreferenzen.
