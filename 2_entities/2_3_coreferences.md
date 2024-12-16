@@ -2,6 +2,7 @@
 title: 2.3. Koreferenzen
 layout: default
 nav_order: 3
+parent: 2. Entitäten
 ---
 
 # 2.3. Koreferenzen

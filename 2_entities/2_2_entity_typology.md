@@ -2,6 +2,7 @@
 title: 2.2. Entitäten-Typologie
 layout: default
 nav_order: 2
+parent: 2. Entitäten
 ---
 
 # 2.2. Entitäten-Typologie

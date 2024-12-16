@@ -2,6 +2,7 @@
 title: 2.1. Entitäten
 layout: default
 nav_order: 1
+parent: 2. Entitäten
 ---
 
 # 2.1. Entitäten
