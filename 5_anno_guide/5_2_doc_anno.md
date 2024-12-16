@@ -15,7 +15,7 @@ Es wird angenommen, dass ein Projekt nach den Empfehlungen in Kapitel 5.1. aufge
 
 ### Textspanne markieren
 
-[!TIP]
+{: .note}
 Wir empfehlen, das "Span"-Layer auf Token-basierte Annotation zu setzen. Dies ermöglicht etwas schnelleres Markieren der Textspannen, weil nicht exakt die Endungen der Wörter markiert werden müssen. Durch Doppelklick kann ein Token schnell angewählt und annotiert werden.
 
 Im Schema wurde es zwar schon erwähnt, aber wir annotieren in diesem Schema immer "lange" Spannen. Das entspricht üblicherweise den Grenzen der jeweiligen [[Nominalphrase]](https://de.wikipedia.org/wiki/Nominalphrase). Es sollte ausserdem nicht vergessen werden, den Kopf (HEAD) zu markieren und zu annotieren (jede Entitätenerwähnung, egal ob Referenz oder Attribut, muss genau einen HEAD aufweisen!).
@@ -50,7 +50,7 @@ Die optionalen Klassifikationen müssen nur annotiert werden, wenn sie vom Stand
 | Ordinalität | Singular (SGL) |
 | Spezifität | Spezifisch (SPC) |
 
-[!TIP]
+{: .note}
 Im Postprocessing können die Standard-Werte in "schema_info.json" angepasst werden.
 
 Pronomina können sogar noch weiter verkürzt werden, solange sie eine Koreferenz zu einem Label aufweisen, welches die vollen Informationen aufweist. Ein PRO reicht in dem Fall aus.
