@@ -2,6 +2,8 @@ title: BeNASch
 description: Ein Annotationsschema für Frühneuhochdeutsch
 theme: just-the-docs
 
+color_scheme: dark
+
 url: https://dhbern.github.io/benasch
 
 # Aux links for the upper right navigation

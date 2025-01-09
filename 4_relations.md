@@ -5,12 +5,9 @@ nav_order: 5
 ---
 
 # 4. Zustände und Ereignisse
-Über Zustände können wir weitere Informationen zu Entitäten im Text vermerken. Sie werden oft durch Attribute und Deskriptoren im Text annotiert, können aber auch im Freitext gegeben sein.
-Als Zustand sind Eigenschaften einer Entität zu bezeichnen, z.B. welche Verwandten sie hat oder dass die Entität verstorben ist. 
-Ein Zustand, der ein Verhältnis zwischen mehreren Entitäten festhalt, wird auch als "Beziehung" bezeichnet.
+Über Zustände können wir weitere Informationen zu Entitäten im Text vermerken. Sie werden oft durch Attribute und Appositionen im Text annotiert, können aber auch im Freitext oder durch Kerne gegeben sein. Als Zustand sind Eigenschaften einer Entität zu bezeichnen, z.B. welche Verwandten sie hat oder dass die Entität verstorben ist. Ein Zustand, der ein Verhältnis zwischen mehreren Entitäten festhalt, wird auch als **Beziehung** bezeichnet.
 
-Ereignisse hingegen vermerken Aktivitäten im Text. Diese finden sich öfter im Freitext, manchmal aber auch in Referenzen, Attributen oder Deskriptoren.
-Beispiele für Ereignisse wäre zum Beispiel eine Transaktion oder ein Todesfall. 
+Ereignisse hingegen vermerken Aktivitäten im Text. Diese finden sich öfter im Freitext, manchmal aber auch in Kernen, Attributen oder Appositionen. Beispiele für Ereignisse wäre zum Beispiel eine Transaktion oder ein Todesfall. 
 
 Ereignisse und Zustände hängen eng miteinander zusammen. 
 So kann z.B. ein "marriage"-Ereignis einen "married"-Zustand ab diesem Punkt implizieren, und ein "divorce"-Ereignis das Ende desselben Zustands.
@@ -96,7 +93,7 @@ Beispiel: "\[Elsa hat auf das Haus 5 Gld. <u>geboten</u>\] und \[am Dienstag hat
 Beispiel: "\[\[Elsa hat auf das Haus 5 Gld. <u>geboten</u>\] und es <u>gekauft</u>.\]"
 
 ### 4.3.2. Trigger
-Der <b>Trigger</b> sollte den zentralen Begriff des Zustands oder des Ereignisses markieren, wobei wir der Konsistenz wegen dazu raten den Trigger auf den linguistischen Kopf der syntaktischen Einheit, welche den Zustand oder das Ereignis ausmacht, zu setzen. Dies ist auf Satz- oder Dokumentebene meist das Prädikat, in Erwähnungsebenen üblicherweise der <i>Head</i>. In seltenen Fällen oder bestimmten Texttypen kann es sein, dass kein Trigger auszumachen ist. In diesem Fall kann der Trigger auch weggelassen werden.
+Der <b>Trigger</b> sollte den zentralen Begriff des Zustands oder des Ereignisses markieren, wobei wir der Konsistenz wegen dazu raten den Trigger auf den linguistischen Kopf der syntaktischen Einheit, welche den Zustand oder das Ereignis ausmacht, zu setzen. Dies ist auf Satz- oder Dokumentebene meist das Prädikat, in Erwähnungsebenen üblicherweise der Kern. In seltenen Fällen oder bestimmten Texttypen kann es sein, dass kein Trigger auszumachen ist. In diesem Fall kann der Trigger auch weggelassen werden.
 
 Beispiel Satzebene: "\[das Kloster hat wegen versessener Zinsen Uelis Haus <u>gefrönt</u>.\]"
 
@@ -208,4 +205,4 @@ Weiter sollten folgende Klassifikationen ausgezeichnet werden (in fett jeweilige
 ## 4.6. Vollständige Beispiele
 _coming soon_
 
-[^1]: Die Beziehung ist hier in einem Deskriptor beschrieben. In diesem Fall kann auch die darüberliegende Annotation, auf die sich der Deskriptor bezieht, mit einer Rolle versehen werden.
+[^1]: Die Beziehung ist hier in einem Attribut beschrieben. In diesem Fall kann auch die darüberliegende Annotation, auf die sich der Attribut bezieht, mit einer Rolle versehen werden.

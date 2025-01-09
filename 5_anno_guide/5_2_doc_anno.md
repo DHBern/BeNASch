@@ -7,6 +7,8 @@ parent: 5. Annotations-Anleitung
 
 # 5.2. Annotation in INCEpTION
 
+**BAUSTELLE: DIESER GUIDE IST AUF BASIS EINER ÄLTEREN VERSION DES SCHEMAS ENTSTANDEN UND WIRD DERZEIT ÜBERARBEITET.**
+
 In diesem Guide wird im Detail erklärt, wie ein Dokument in Inception annotiert werden sollte, damit es durch das BeNASch-assoziierte Postprocessing korrekt verarbeitet werden kann. Die hier empfohlene Methode der Annotation zielt darauf ab, möglichst weniger "überflüssige" Tags setzen zu müssen.
 
 Es wird angenommen, dass ein Projekt nach den Empfehlungen in Kapitel 5.1. aufgesetzt wurde und die entsprechenden Layer "Span" und "Relation" vorhanden sind.
