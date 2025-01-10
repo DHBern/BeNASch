@@ -34,6 +34,13 @@ Meetings zur Diskussion von Punkten aus dem Github-Forum finden alle zwei Wochen
 
 ## Änderungsprotokoll
 
+### Januar 2025
+Überarbeitung des Schemas, insbesondere Namensgebung:
+- Stärkere Verwendung der deutschen Begrifflichkeiten (Kern statt Head).
+- Umbenennung von Attributen zu Appositionen.
+- Umbenennung von Deskriptoren zu Attributen.
+- Erwähnungs-Typen und Erwähnungspräzisionen wurden durch Kern-Klassen ersetzt.
+
 ### November 2024
 (für genaues Changelog siehe Github Repo)
 - Umbenennung von Beziehungen in Zustände, Beziehungen bezeichnen Zustände mit mehr als einer beteiligten Entität.
