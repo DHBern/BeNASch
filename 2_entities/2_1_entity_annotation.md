@@ -88,7 +88,7 @@ Beispiele (**Kern**):
 | **sie** | Pronomen |
 
 ### 2.1.3.2. Apposition (*app*)
-Unter Appositionen sind Phrasen, die lockeren oder engen [Appositionen](https://de.wikipedia.org/wiki/Apposition) entsprechen, zu verstehen. Optional können linguistisch-interessierte Projekte natürlich zwischen lockeren und engen Appositionen unterscheiden.
+Unter Appositionen sind Phrasen, die lockeren oder engen [Appositionen](https://de.wikipedia.org/wiki/Apposition) entsprechen, zu verstehen. Optional können linguistisch interessierte Projekte natürlich zwischen lockeren und engen Appositionen unterscheiden.
 
 Appositionen teilen viele Gemeinsamkeiten mit Entitäten-Erwähnungen und können wiederum Verschachtelungen enthalten. **In Appositionen müssen beschreibende Elemente ebenfalls annotiert werden!**
 
@@ -104,7 +104,7 @@ Beispiele (**Apposition**):
 | die Stadt **Braunschweig** |
 
 ### 2.1.3.3. Attribute (*att*)
-BeNASch geht in seinem Verständnis von [Attributen](https://de.wikipedia.org/wiki/Attribut_(Grammatik)) aus pragmatischen Gründen weiter als die Grammatik. Wir verwenden Attribute, um jegliche Phrasen zu annotieren, die nicht in die anderen Kategorien von Beschreibungen fallen, aber trotzdem relevante Informationen enthalten, z.B. Possessivartikel. Linguistisch-interessierte Projekte können optional noch genauere Infos zu den Attributen festhalten, z.B. Genitivattribut, Präpositionalattribut, Relativsatz, etc.
+BeNASch geht in seinem Verständnis von [Attributen](https://de.wikipedia.org/wiki/Attribut_(Grammatik)) aus pragmatischen Gründen weiter als die Grammatik. Wir verwenden Attribute, um jegliche Phrasen zu annotieren, die nicht in die anderen Kategorien von Beschreibungen fallen, aber trotzdem relevante Informationen enthalten, z.B. Possessivartikel. Linguistisch interessierte Projekte können optional noch genauere Infos zu den Attributen festhalten, z.B. Genitivattribut, Präpositionalattribut, Relativsatz, etc.
 
 In zwei Ausnahmen werden Attribute nicht annotiert:
 
@@ -138,7 +138,7 @@ Als Numeralia annotieren wir Phrasen, die auf die genaue Menge der Entität(en) 
 
 ## 2.1.4. Listen (*lst*)
 2.4. Listen
-Als Listen bezeichnen wir den Spezialfall, in dem mehrere Nominalphrasen die Kerne einer äusseren Nominalphrasen ersetzen, üblicherweise verbunden durch Konjunktionen. Listen helfen uns dabei, Appositionen und Attribute, welche sich auf alle Entitäten innerhalb dieser komplexen Nominalphrase beziehen, mit diesen zu verbinden.
+Als Listen bezeichnen wir den Spezialfall, in dem mehrere Nominalphrasen die Kerne einer äusseren Nominalphrase ersetzen, üblicherweise verbunden durch Konjunktionen. Listen helfen uns dabei, Appositionen und Attribute, welche sich auf alle Entitäten innerhalb dieser komplexen Nominalphrase beziehen, mit diesen zu verbinden.
 
 Das BeNASch empfiehlt nach derzeitigem Standard die Annotation aller solcher Listen, aber um Schema-konformität herzustellen reicht es, nur solche Listen zu annotieren, die zwingend notwendig sind, weil sonst Appositionen und Attribute nicht korrekt mit den in den Listen enthaltenen Entitäten in Verbindung gesetzt werden könnten.
 

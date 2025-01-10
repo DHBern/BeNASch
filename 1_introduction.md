@@ -43,7 +43,7 @@ Die Vorverarbeitung des Textes sollte wie die Annotation einheitlich sein. Aus d
 Abkürzungen sollten möglichst aufgelöst und ohne weitere Markierungen (z.B. eckige Klammern) dargestellt werden.
 
 ## 1.6. Wörter als Basis-Einheit
-In BeNASch wird auf Token-Basis annotiert. Dies deshalb, weil nur wenige maschinelle Annotationsalgorithmen zeichenbasierte Annotationen akzeptieren und die Annotation dadurch schneller möglich ist (Es ist schneller auf ein Wort zu klicken, also jedes mal die genauen Zeichen zu markieren).
+In BeNASch wird auf Token-Basis annotiert. Dies deshalb, weil nur wenige maschinelle Annotationsalgorithmen zeichenbasierte Annotationen akzeptieren und die Annotation dadurch schneller möglich ist (Es ist schneller auf ein Wort zu klicken, als jedes mal die genauen Zeichen zu markieren).
 
 ## 1.7. Dokumentation
 Wie schon erwähnt, empfehlen wir in diesem Schema neben den "Basis-Typen" auch optionale Typen. Um maximale Kompatibilität zu gewährleisten ist es wichtig, dass sich ein Projekt darauf einigt, welche optionale Typen es nutzen möchte (siehe Kapitel 6 für Empfehlungen). Die gewählten Typen müssen konsequent annotiert werden um Konsistenz in den Daten zu gewährleisten! Die Annotationsdokumentation des Projekts muss klar und verständlich festhalten, welche optionalen Typen annotiert wurden. Falls eines der Module in den Empfehlungen (_coming soon_) genutzt wurde, kann einfach das Modul festgehalten werden. In jedem Fall ist die Version des aktuellen BeNASch in der Dokumentation zu verzeichnen. (Versionierung beginnt bald)
@@ -150,7 +150,7 @@ Die Textstrings hier beziehen sich auf die in 1.8.2. definierten Erwähnungen:
 **seine Frau -- seine**
 - *fam* steht wie bei der Kern-Klasse in 1.8.2. für *family* und ist die Klassifikation der Beziehung.
 - Rolle 1 (Ehepartner:in) ist *seine Frau*, Rolle 2 (Ehepartner:in) ist *seine*.
-- Wenn unsere Projektdokumentation auch die Annotation der Textspanne vorschreiben würde, wäre das *seine Frau*, also die gleich Spanne wie die Apposition.
+- Wenn unsere Projektdokumentation auch die Annotation der Textspanne vorschreiben würde, wäre das *seine Frau*, also die gleiche Spanne wie die Apposition.
 - Wenn unsere Projektdokumentation auch die Annotation des Triggers vorschreiben würde, wäre das der Kern *Frau*.
 - Wir machen uns diese überschneidenden Informationen mit dem Attribut zu Nutze und müssen im empfohlenen Workflow nur die Apposition mit ihrem Kern annotieren, die Beziehung samt Rollen, optionaler Textspanne und Trigger wird dadurch impliziert und im Postprocessing erzeugt. 
 - Da wir textnah annotieren, findet die Beziehung nur zwischen der Apposition und dem unmittelbaren Pronomen statt, die Verbindung auf *Diebolt Rüly* findet erst in einem nächsten Schritt statt.
