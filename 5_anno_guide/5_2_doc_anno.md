@@ -122,3 +122,9 @@ Einiges wurde schon erwähnt, explizit gilt: Ist kein Trigger annotiert, wird de
 ## Vollständiges Beispiel
 
 ![Screenshot des vollständig annotierten Dokuments](example_full_anno.png)
+
+Wie wir die annotierten Dateien aus INCEpTION herausbekommen und in nützliche Formate zur Weiterverarbeitung umwandeln, wird im nächsten Kapitel 5.3. besprochen. 
+
+<a href="5_3_postprocessing.md">
+  <button type="button" style="cursor:pointer;">Weiter zum Postprocessing-Guide →</button>
+</a>

@@ -100,3 +100,8 @@ Klicken Sie nun **Dashboard**, dann auf **Annotation** und wählen Sie eines der
 *Bei Element sollten Sie im Dropdown auch die Tags sehen können. Wenn Sie anfangen zu schreiben, hilft Ihnen ein Autocomplete dabei, die Tags schneller eingeben zu können*
 
 Im Kapitel 5.2. wird der Annotationsprozess im Detail besprochen, mit einigen Tipps, um Ihn effizienter zu machen.
+
+
+<a href="5_2_doc_anno.md">
+  <button type="button" style="cursor:pointer;">Weiter zum Annotationsguide →</button>
+</a>
