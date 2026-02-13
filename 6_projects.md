@@ -17,13 +17,15 @@ Das zugrundeliegende Grundbuch beschreibt Geschäfte und gerichtliche Vorgänge 
 *Eine typische Registerkarte aus dem Historischen Grundbuch der Stadt Basel, die den Verkauf einer Liegenschaft im Jahr 1510 beschreibt (Staatsarchiv Basel-Stadt HGB 11/34, S. 4).*
 
 ### Eckdaten
-Umfang: 829 Dokumente, 54'926 Token, 30'020 Annotationen
-Zeitraum: 1400-1700 (grossteils 1400-1550)
-Sprache: Frühneuhochdeutsch* (*siehe verlinkten Artikel für mehr Details)
-Region: Stadt Basel
+| **Eckdaten**       | **Details**                                                                 |
+|---------------------|-----------------------------------------------------------------------------|
+| Umfang          | 829 Dokumente, 54'926 Token, 30'020 Annotationen                          |
+| Zeitraum        | 1400-1700 (grossteils 1400-1550)                                           |
+| Sprache         | Frühneuhochdeutsch* (*siehe verlinkten Artikel für mehr Details)           |
+| Region          | Stadt Basel                                                               |
 
 ### Datenrepository
-https://zenodo.org/records/16919653
+[https://zenodo.org/records/16919653](https://zenodo.org/records/16919653)
 
 ### BeNASch-Version
 Prototyp
