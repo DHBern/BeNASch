@@ -7,9 +7,7 @@ parent: 5. Annotations-Anleitung
 
 # 5.1. Projekt-Vorbereitung
 
-Autor: Ismail Prada Ziegler
-
-Bei Fragen zum Setup dürfen Sie sich gerne direkt bei [per Mail](ismail.prada@unibe.ch]) an mich wenden.
+Autor: Ismail Prada Ziegler, Universität Bern [✉](ismail.prada@unibe.ch]) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
 
 
 ## Inception-Installation
@@ -19,11 +17,11 @@ Wichtig: Dieser Guide wurde basierend auf der INCEpTION-Version 38.6. geschriebe
 Wir empfehlen für die Annotation [INCEpTION](https://inception-project.github.io/) zu verwenden. Uns ist keine andere Plattform bekannt, die verschachtelte Annotation im selben Umfang unterstützt. INCEpTION bietet darüber hinaus auch eine Vielzahl von zusätzlichen Features, z.B. das Linking auf eine Knowledgebase während der Annotation, die Nutzung von Recommender-Modulen und die Infrastruktur für professionelles Projektmanagement. Der Nachteil ist, dass die Plattform selbst gehostet werden muss. Wer etwas technisches Know-How hat, sollte das aber ohne Probleme hinbekommen. Wir empfehlen, die Plattform auf einem Server zu installieren, aber theoretisch kann sie auch lokal betrieben und nur bei Bedarf eingeschaltet werden. Für eine Testumgebung kann man z.B. einen virtuellen Server bei [DigitalOcean](https://www.digitalocean.com/) mieten. 
 Der Installationsprozess von INCEpTION wird im [Administrator-Guide](https://inception-project.github.io/releases/38.6/docs/admin-guide.html) ausführlich und im [User-Guide](https://inception-project.github.io/releases/38.6/docs/user-guide.html#_installing_and_starting_inception) in Kürze besprochen und wird hier nicht wiederholt. Folgen Sie am besten dem User-Guide und lesen Sie bei Fragen im Admin-Guide nach. Wir empfehlen, dass Sie sich den User-Guide vollständig durchlesen. Für den nächsten Schritt wird angenommen, dass INCEpTION installiert wurde, und läuft. Im Browser sollte die Plattform nun erreichbar sein und so aussehen:
 
-![A screenshot of the INCEpTION login screen.](../static/images/inception_login_sceen.png)
+![A screenshot of the INCEpTION login screen.](inception_login_sceen.png)
 
 
 ## Import der Projekt-Vorlage
-Sie können ![hier](./benasch-project-template.zip) ein leeres Projekt mit der BeNASch-Konfiguration herunterladen. Als Admin können Sie das ZIP einfach über **Import Project** einspeisen, und können damit einen grossen Teil des Guides überspringen. Beachten Sie, dass der Vorlage auch schon eine Beispieldatei beiliegt, löschen Sie diese einfach. 
+Sie können [📦 hier](./benasch-project-template.zip) ein leeres Projekt mit der BeNASch-Konfiguration herunterladen. Als Admin können Sie das ZIP einfach über **Import Project** einspeisen, und können damit einen grossen Teil des Guides überspringen. Beachten Sie, dass der Vorlage auch schon eine Beispieldatei beiliegt, löschen Sie diese einfach. 
 
 
 ## Aufsetzen des Projekts
@@ -98,6 +96,7 @@ In früheren INCEpTION-Versionen konnte "Plain Text" bei langen Sätzen und Anno
 Klicken Sie nun **Dashboard**, dann auf **Annotation** und wählen Sie eines der hochgeladenen Dokumente aus. Markieren Sie mit der Maus eine Spanne im Text, sieht die rechte Sidebar so aus wie im Bild unten, sind Sie bereit um loszulegen:
 
 ![A screenshot showing the inception sidebar](example_inception_interface.png)
+
 *Bei Element sollten Sie im Dropdown auch die Tags sehen können. Wenn Sie anfangen zu schreiben, hilft Ihnen ein Autocomplete dabei, die Tags schneller eingeben zu können*
 
 Im Kapitel 5.2. wird der Annotationsprozess im Detail besprochen, mit einigen Tipps, um Ihn effizienter zu machen.
