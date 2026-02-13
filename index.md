@@ -26,6 +26,9 @@ auch gerne per Pull-Request einreichen.
 
 ## Neuigkeiten
 
+### Poster auf der DHd 2026 (Februar 2026)
+Dominic Weber und Ismail Prada Ziegler, sind auf der DHd26 in Wien mit einem Poster zum Schema anwesend. Wir hoffen darauf, neue Inputs zu sammeln und dem Schema mehr Bekanntheit zu verschaffen.
+
 ### BeNASch-Workshop im Januar 2025
 Wir laden herzlich interessierte Forscher:innen zum ersten Workshop rund um das BeNASch-Schema ein, welcher am 23. und 24. Januar 2025 stattfinden wird. Der Workshop findet in Bern statt und ist kostenlos, alle weiteren Infos gibt es [hier](https://www.dh.unibe.ch/forschung/benasch/index_ger.html).
 
