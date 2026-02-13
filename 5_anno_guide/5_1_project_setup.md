@@ -8,6 +8,7 @@ parent: 5. Annotations-Anleitung
 # 5.1. Projekt-Vorbereitung
 
 Autor: Ismail Prada Ziegler
+
 Bei Fragen zum Setup dürfen Sie sich gerne direkt bei [per Mail](ismail.prada@unibe.ch]) an mich wenden.
 
 
@@ -19,6 +20,10 @@ Wir empfehlen für die Annotation [INCEpTION](https://inception-project.github.i
 Der Installationsprozess von INCEpTION wird im [Administrator-Guide](https://inception-project.github.io/releases/38.6/docs/admin-guide.html) ausführlich und im [User-Guide](https://inception-project.github.io/releases/38.6/docs/user-guide.html#_installing_and_starting_inception) in Kürze besprochen und wird hier nicht wiederholt. Folgen Sie am besten dem User-Guide und lesen Sie bei Fragen im Admin-Guide nach. Wir empfehlen, dass Sie sich den User-Guide vollständig durchlesen. Für den nächsten Schritt wird angenommen, dass INCEpTION installiert wurde, und läuft. Im Browser sollte die Plattform nun erreichbar sein und so aussehen:
 
 ![A screenshot of the INCEpTION login screen.](../static/images/inception_login_sceen.png)
+
+
+## Import der Projekt-Vorlage
+Sie können ![hier](./benasch-project-template.zip) ein leeres Projekt mit der BeNASch-Konfiguration herunterladen. Als Admin können Sie das ZIP einfach über **Import Project** einspeisen, und können damit einen grossen Teil des Guides überspringen. Beachten Sie, dass der Vorlage auch schon eine Beispieldatei beiliegt, löschen Sie diese einfach. 
 
 
 ## Aufsetzen des Projekts
