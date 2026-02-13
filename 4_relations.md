@@ -13,7 +13,7 @@ Ereignisse und Zustände hängen eng miteinander zusammen.
 So kann z.B. ein "marriage"-Ereignis einen "married"-Zustand ab diesem Punkt implizieren, und ein "divorce"-Ereignis das Ende desselben Zustands.
 Wir annotieren aber auch in diesem Fall textnah, d.h. nur das im Text genannte Ereignis, nicht aber der implizierte Zustand wird vermerkt.
 
-## 4.1 Annotationsebene
+## 4.1. Annotationsebene
 Eine Beziehung oder ein Ereignis finden jeweils auf einer bestimmten syntaktischen Ebene statt, welche wir als Annotationsebene bezeichnen. Annotationen für den Zustand oder das Ereignis dürfen nur auf dieser Ebene erfolgen bzw. Entitäten/Werte auf dieser Ebene verbinden. Eine Annotationsebene kann z.B. die Dokument- oder Satzebene sein, oder die Ebene innerhalb einer Erwähnung. Falls der Zustand oder das Ereignis in einer Erwähnung stattfinden, kann die Erwähnung selbst auch ein Element der Beziehung oder des Ereignisses sein.
 
 Beispiel: "\[\[<u>ihr</u>\] <u>Ehemann</u>\]"

@@ -45,16 +45,10 @@ Beispiel: "\... zinset \[jährl\] von eigenschaft ..."
 Beispiel: "\[an St. Martins Tag\]"
 
 Datumsangaben können TIME_FIN-Werte enthalten, welche den Datumswert
-verändern:
+verändern, diese Art von verschachtelter Annotation wird zwar empfohlen, ist derzeit aber optional:
 
 Beispiel mit TIME_FIN: "\[\[5 Tage /TIME_FIN\] vor St. Martins Tag
-/DATE_FIN\]"
-
-Sie können auch durch TIME_REC als sich wiederholend gekennzeichnet
-werden.
-
-Beispiel mit TIME_FIN + TIME_REC: "\[\[jährl.\] \[5 Tage\] vor St.
-Martins Tag\]
+/DATE\]"
 
 ## 3.2. Optionale Werte
 

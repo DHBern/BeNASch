@@ -37,6 +37,10 @@ Meetings zur Diskussion von Punkten aus dem Github-Forum finden alle zwei Wochen
 
 ## Änderungsprotokoll
 
+### Februar 2026
+- Neuer Reiter "Beispielprojekte", mit einem ersten verlinkten Projekt.
+- Klarifikation und Typo-Korrektur an einigen Stellen.
+
 ### Januar 2025
 Überarbeitung des Schemas, insbesondere Namensgebung:
 - Stärkere Verwendung der deutschen Begrifflichkeiten (Kern statt Head).

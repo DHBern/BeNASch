@@ -7,8 +7,8 @@ parent: 2. Entitäten
 
 # 2.1. Entitäten
 
-## 2.1.1. Identifikation von Entitäten
-Eine Entitäten-Erwähnung wird dann annotiert, wenn die Entität unter eine der festgelegten Kategorien (Kapitel 2.2.) fällt. 
+## 2.1.1. Erwähnungen (*Reference*)
+Eine Entitäten-Erwähnung (auch: Referenz) wird dann annotiert, wenn die Entität unter eine der festgelegten Kategorien (Kapitel 2.2.) fällt. 
 In der Bestimmung der Abgrenzung der Erwähnung, d.h. welche Wörter mit zur Erwähnung gehören, folgen wir soweit möglich der syntaktischen Struktur des Satzes.
 Eine Erwähnung besteht üblicherweise aus einer [[Nominalphrase]](https://de.wikipedia.org/wiki/Nominalphrase). Ein paar Beispiele um zu beschreiben, was Teil einer Erwähnung ist:
 
@@ -73,7 +73,7 @@ geht"
 Für jede Entitäten-Erwähnung (und für Appositionen innerhalb von Erwähnungen) werden alle Elemente innerhalb der Erwähnung (bzw. Apposition) annotiert, die die Entität beschreiben.
 
 ### 2.1.3.1. Kern (*head*)
-Der Kern entspricht weitestgehend dem grammatikalischen Konzept des [Kerns](https://de.wikipedia.org/wiki/Kopf_(Grammatik)), bzw. Kopfes. Jede Erwähnung sollte genau einen Kern aufweisen. Kerne können keine weiteren Verschachtelungen enthalten.
+Der Kern (auch: Kopf) entspricht weitestgehend dem grammatikalischen Konzept des [Kerns](https://de.wikipedia.org/wiki/Kopf_(Grammatik)), bzw. Kopfes. Jede Erwähnung sollte genau einen Kern aufweisen. Kerne können keine weiteren Verschachtelungen enthalten.
 
 Jedem Kern muss zudem ein Kern-Klasse zugewiesen werden. Diese kategorisiert den Inhalt des Kerns. Siehe Kapitel 2.2.2. für eine Übersicht der Kern-Klassen.
 
@@ -137,7 +137,6 @@ Beispiele, bei denen kein Attribut nach BeNASch vorliegt:
 Als Numeralia annotieren wir Phrasen, die auf die genaue Menge der Entität(en) hinweisen. Nicht annotiert werden muss der Artikel “ein”.
 
 ## 2.1.4. Listen (*lst*)
-2.4. Listen
 Als Listen bezeichnen wir den Spezialfall, in dem mehrere Nominalphrasen die Kerne einer äusseren Nominalphrase ersetzen, üblicherweise verbunden durch Konjunktionen. Listen helfen uns dabei, Appositionen und Attribute, welche sich auf alle Entitäten innerhalb dieser komplexen Nominalphrase beziehen, mit diesen zu verbinden.
 
 Das BeNASch empfiehlt nach derzeitigem Standard die Annotation aller solcher Listen, aber um Schema-konformität herzustellen reicht es, nur solche Listen zu annotieren, die zwingend notwendig sind, weil sonst Appositionen und Attribute nicht korrekt mit den in den Listen enthaltenen Entitäten in Verbindung gesetzt werden könnten.

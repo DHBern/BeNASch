@@ -17,6 +17,7 @@ Das zugrundeliegende Grundbuch beschreibt Geschäfte und gerichtliche Vorgänge 
 *Eine typische Registerkarte aus dem Historischen Grundbuch der Stadt Basel, die den Verkauf einer Liegenschaft im Jahr 1510 beschreibt (Staatsarchiv Basel-Stadt HGB 11/34, S. 4).*
 
 ### Eckdaten
+
 | **Eckdaten**       | **Details**                                                                 |
 |---------------------|-----------------------------------------------------------------------------|
 | Umfang          | 829 Dokumente, 54'926 Token, 30'020 Annotationen                          |
