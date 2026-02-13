@@ -7,7 +7,7 @@ parent: 5. Annotations-Anleitung
 
 # 5.2. Annotation in INCEpTION
 
-Autor: Ismail Prada Ziegler, Universität Bern [✉](ismail.prada@unibe.ch) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
+Autor: Ismail Prada Ziegler, Universität Bern [✉](mailto:ismail.prada@unibe.ch) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
 
 In diesem Guide wird im Detail erklärt, wie ein Dokument in Inception annotiert werden sollte, damit es durch das BeNASch-assoziierte Postprocessing korrekt verarbeitet werden kann. Die hier empfohlene Methode der Annotation zielt darauf ab, möglichst keine "überflüssigen" Tags setzen zu müssen.
 

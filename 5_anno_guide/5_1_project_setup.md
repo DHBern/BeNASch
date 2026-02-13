@@ -7,7 +7,7 @@ parent: 5. Annotations-Anleitung
 
 # 5.1. Projekt-Vorbereitung
 
-Autor: Ismail Prada Ziegler, Universität Bern [✉](ismail.prada@unibe.ch) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
+Autor: Ismail Prada Ziegler, Universität Bern [✉](mailto:ismail.prada@unibe.ch) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
 
 
 ## Inception-Installation
