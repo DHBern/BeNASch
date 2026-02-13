@@ -7,7 +7,7 @@ parent: 5. Annotations-Anleitung
 
 # 5.1. Projekt-Vorbereitung
 
-Autor: Ismail Prada Ziegler, Universität Bern [✉](ismail.prada@unibe.ch]) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
+Autor: Ismail Prada Ziegler, Universität Bern [✉](ismail.prada@unibe.ch) [*ORCiD*](https://orcid.org/0000-0003-4229-8688)
 
 
 ## Inception-Installation
@@ -21,7 +21,7 @@ Der Installationsprozess von INCEpTION wird im [Administrator-Guide](https://inc
 
 
 ## Import der Projekt-Vorlage
-Sie können [📦 hier](./benasch-project-template.zip) ein leeres Projekt mit der BeNASch-Konfiguration herunterladen. Als Admin können Sie das ZIP einfach über **Import Project** einspeisen, und können damit einen grossen Teil des Guides überspringen. Beachten Sie, dass der Vorlage auch schon eine Beispieldatei beiliegt, löschen Sie diese einfach. 
+Sie können [📦 hier](./benasch-project-template.zip) ein leeres Projekt mit der BeNASch-Konfiguration herunterladen. Als Admin können Sie das ZIP einfach über **Import Project** einspeisen, und können damit die Punkte zur Konfiguration der Layer und Tagsets überspringen. Machen Sie sich dennoch mit diesen Konzepten und Settings vertraut! Beachten Sie, dass der Vorlage auch schon eine Beispieldatei beiliegt, löschen Sie diese einfach, sobald Sie sie nicht mehr benötigen.
 
 
 ## Aufsetzen des Projekts
