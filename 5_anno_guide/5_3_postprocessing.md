@@ -12,7 +12,7 @@ Autor: Ismail Prada Ziegler, Universität Bern [✉](mailto:ismail.prada@unibe.c
 
 ## Projekt exportieren
 Als erstes müssen wir die Daten aus der INCEpTION-Datenbank rausbekommen. Dazu gehen Sie (mit Projektmanagerrechten) auf die **Settings**-Seite des Projekts, dann auf **Export**. Hier wählen Sie als sekundäres Datenformat **UIMA CAS XMI (XML 1.1)**, dann drücken Sie *Start export*. Es kann einen Moment dauern, bis der Download bereit ist, aber sobald er abgeschlossen ist, drücken Sie *Download*. Damit wir eine ZIP-Datei heruntergeladen.
-Im ZIP-Ordner finden wir unter *annotation* einen Ordner für jedes Dokument im Projekt. Innerhalb des Ordners liegen wiederum eine ZIP-Datei pro Annotator:in, die das Dokument bearbeitet haben (als *bearbeitet* zählt dabei auch schon nur das öffnen der Datei). Zusätzlich liegt darin ein ZIP-Ordner mit der unveränderten Datei (im CAS XMI-Format).
+Im ZIP-Ordner finden wir unter *annotation* einen Ordner für jedes Dokument im Projekt. Innerhalb des Ordners liegen wiederum eine ZIP-Datei pro Annotator:in, die das Dokument bearbeitet haben (als *bearbeitet* zählt dabei auch schon nur das Öffnen der Datei). Zusätzlich liegt darin ein ZIP-Ordner mit der unveränderten Datei (im CAS XMI-Format).
 Wenn Sie den User-ZIP-Ordner öffnen, finden Sie die XMI-Datei selbst. Diese sieht ungefähr so aus:
 
 ![Snippet from the XMI file](example_xmi.png)

@@ -125,6 +125,6 @@ Einiges wurde schon erwähnt, explizit gilt: Ist kein Trigger annotiert, wird de
 
 Wie wir die annotierten Dateien aus INCEpTION herausbekommen und in nützliche Formate zur Weiterverarbeitung umwandeln, wird im nächsten Kapitel 5.3. besprochen. 
 
-<a href="5_3_postprocessing.md">
+<a href="5_3_postprocessing.html">
   <button type="button" style="cursor:pointer;">Weiter zum Postprocessing-Guide →</button>
 </a>

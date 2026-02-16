@@ -102,6 +102,6 @@ Klicken Sie nun **Dashboard**, dann auf **Annotation** und wählen Sie eines der
 Im Kapitel 5.2. wird der Annotationsprozess im Detail besprochen, mit einigen Tipps, um Ihn effizienter zu machen.
 
 
-<a href="5_2_doc_anno.md">
+<a href="5_2_doc_anno.html">
   <button type="button" style="cursor:pointer;">Weiter zum Annotationsguide →</button>
 </a>
