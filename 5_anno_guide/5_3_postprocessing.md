@@ -90,4 +90,32 @@ Warnungen hingegen weisen daraufhin, dass etwas nicht ganz stimmt, das Programm 
 
 
 ## Umwandlung in verschiedene Formate
-*coming soon*
+
+### Umwandlung zu Spalten-Format / CoNLL-like
+Ein gängiges Format für Maschine Learning Prozess ist die spaltenbasierte Darstellung. Hierbei wird in einer ersten Spalte die jeweilige Worteinheit (*token*) und in den weiteren Spalten die Annotationen dargestellt. Das wird normalerweise kombiniert mit einer BIO-Annotationen: B als Präfix für die erste Worteinheit einer Annotation, I für die folgenden und O, wenn keine Annotation vorhanden ist.
+
+| Token | Label |
+| :--- | :--- |
+| Hans | B-PER |
+| Weber | I-PER |
+| lebt | O |
+| in | O |
+| Basel | B-GPE-LOC |
+| . | O |
+
+Ein verschachtelter Datensatz kann so natürlich nicht problemlos dargestellt werden. Wir können aber bestimmte Elemente aus dem Datensatz entnehmen, die genau unseren Bedürfnissen entsprechen. Diese Aufgabe erfüllt das Skript *create_column_corpus.py*. Auch hier gilt es, zuerst die Pfade anzupassen. Ist das geschehen, muss dem Programm genaue Instruktionen gegeben werden, wie es das BeNASch-XML umwandeln soll. Diese Instruktionen finden sich in *PROCESSING_CONFIG*.
+
+Wir müssen primär zwei Dinge definieren: 
+
+- Welche Elemente bilden die Grundlage für unsere Trainingsbeispiele
+- Welche Annotationen sollen in den Beispielen einbezogen, welche ignoriert werden?
+
+Unter *base* tragen Sie die Annotationsebenen ein. *xpath* sucht die entsprechenden Elemente heraus und *label* erzeugt setzt einen entsprechenden Prä- und Suffix (Die Nutzung dieser Label ist nicht notwendig, aber insbesondere wenn Sie vorhaben ein verschachteltes Modell zu trainieren, können Sie sich für sehr wichtig erweisen). 
+
+*columns* ist eine Liste, jedes Element darin definiert die Konfigurationen für eine weitere Spalte nach der Token-Spalte. Auch hier können Elemente über *xpath* gefiltert werden. Welche Annotation genommen wird, wird dann über *tag* definiert, z.B. könnte man jeweils Referenz + Klasse nehmen. Orientieren Sie sich am Beispiel um ihre eigenen Settings zu schreiben.
+
+Wollen wir z.B. nur ein ganz einfaches Modell, das klassische Named Entities auf Dokumentebene trainiert, dann wäre unser Code ganz einfach:
+
+![Example code to generate a simple NE training file.](example_conll_config.png)
+
+Führen Sie das Skript aus, sobald Sie die Settings angepasst haben. Mit der neuen Datei können Sie nun z.B. ein Flair-Sequence-Tagging-Modell trainieren. (*Guide dazu in Arbeit*)
