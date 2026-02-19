@@ -117,5 +117,6 @@ Unter *base* tragen Sie die Annotationsebenen ein. *xpath* sucht die entsprechen
 Wollen wir z.B. nur ein ganz einfaches Modell, das klassische Named Entities auf Dokumentebene trainiert, dann wäre unser Code ganz einfach:
 
 ![Example code to generate a simple NE training file.](example_conll_config.png)
+*Beim Tag leitet das ^-Zeichen auf das Eltern-Element, das @-Zeichen auf ein bestimmtes Attribut weiter. Dadurch erhält der Head dann die Entitätenklasse des Eltern-Elements.*
 
 Führen Sie das Skript aus, sobald Sie die Settings angepasst haben. Mit der neuen Datei können Sie nun z.B. ein Flair-Sequence-Tagging-Modell trainieren. (*Guide dazu in Arbeit*)
